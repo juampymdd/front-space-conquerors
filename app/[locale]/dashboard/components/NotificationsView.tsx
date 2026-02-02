@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { ScrollArea } from "@/components/ui/ScrollArea";
 import { Mail, AlertTriangle, CheckCircle, Info, Radio } from "lucide-react";
+import { 
+  DialogRoot, 
+  DialogBackdrop, 
+  DialogPositioner, 
+  DialogContent, 
+  DialogTitle, 
+  DialogDescription, 
+  DialogCloseTrigger,
+  Portal 
+} from "@/components/ui/Dialog";
 
 interface Notification {
   id: string;
@@ -18,7 +28,7 @@ const MOCK_NOTIFICATIONS: Notification[] = [
     type: "alert",
     sender: "Sistema de Defensa",
     subject: "INCURSIÓN DETECTADA",
-    message: "Sensores de largo alcance han detectado una flota hostil entrando en el sector Sigma-9. Se recomienda elevar nivel de alerta.",
+    message: "Sensores de largo alcance han detectado una flota hostil entrando en el sector Sigma-9. Se recomienda elevar nivel de alerta. Protocolo de defensa automático iniciado. Todas las naves deben reportarse a sus estaciones de combate inmediatamente.",
     date: "Hace 2m",
     read: false,
   },
@@ -27,7 +37,7 @@ const MOCK_NOTIFICATIONS: Notification[] = [
     type: "comm",
     sender: "Embajador Kael'Thas",
     subject: "Propuesta de Tratado Comercial",
-    message: "La Federación Galáctica extiende una oferta de libre comercio de Deuterio. Solicitamos audiencia inmediata.",
+    message: "La Federación Galáctica extiende una oferta de libre comercio de Deuterio. Solicitamos audiencia inmediata. Nuestras refinerías en el cinturón de asteroides X-99 tienen excedentes que podrían beneficiar a su colonia.",
     date: "Hace 15m",
     read: false,
   },
@@ -36,7 +46,7 @@ const MOCK_NOTIFICATIONS: Notification[] = [
     type: "success",
     sender: "Ingeniería",
     subject: "Investigación Completada: Motores de Impulso V",
-    message: "Las mejoras en los propulsores sub-lumínicos han sido instaladas. La velocidad de la flota ha aumentado un 15%.",
+    message: "Las mejoras en los propulsores sub-lumínicos han sido instaladas. La velocidad de la flota ha aumentado un 15%. Ahora podemos alcanzar los planetas exteriores en la mitad de tiempo.",
     date: "Hace 1h",
     read: true,
   },
@@ -45,7 +55,7 @@ const MOCK_NOTIFICATIONS: Notification[] = [
     type: "info",
     sender: "Logística",
     subject: "Llegada de Suministros",
-    message: "El convoy de carga N-442 ha arribado a la colonia minera. Descarga de 50,000 unidades de Metal en proceso.",
+    message: "El convoy de carga N-442 ha arribado a la colonia minera. Descarga de 50,000 unidades de Metal en proceso. Se espera finalizar en 2 horas estándar.",
     date: "Hace 3h",
     read: true,
   },
@@ -54,7 +64,7 @@ const MOCK_NOTIFICATIONS: Notification[] = [
     type: "warning",
     sender: "Sensores Planetarios",
     subject: "Actividad Sísmica",
-    message: "Temblores menores detectados en el sector volcánico. La producción de energía podría fluctuar.",
+    message: "Temblores menores detectados en el sector volcánico. La producción de energía podría fluctuar. Se recomienda reforzar los cimientos de los reactores de fusión.",
     date: "Hace 5h",
     read: true,
   },
@@ -63,7 +73,7 @@ const MOCK_NOTIFICATIONS: Notification[] = [
       type: "info",
       sender: "Alto Mando",
       subject: "Bienvenida, Comandante",
-      message: "Su asignación al sector fronterizo ha sido confirmada. Esperamos grandes cosas de su administración.",
+      message: "Su asignación al sector fronterizo ha sido confirmada. Esperamos grandes cosas de su administración. La flota está a su disposición.",
       date: "Hace 1d",
       read: true,
     },
@@ -86,6 +96,8 @@ const TypeColor = {
 };
 
 export function NotificationsView() {
+  const [selectedNotification, setSelectedNotification] = useState<Notification | null>(null);
+
   return (
     <div className="h-full flex flex-col px-8 pt-8 pb-4">
       <div className="flex items-center gap-4 mb-8">
@@ -112,8 +124,9 @@ export function NotificationsView() {
                     return (
                         <div 
                             key={notif.id} 
+                            onClick={() => setSelectedNotification(notif)}
                             className={`
-                                group relative p-4 border transition-all duration-300
+                                group relative p-4 border transition-all duration-300 cursor-pointer
                                 ${notif.read ? 'border-primary/10 bg-primary/[0.02] opacity-70 hover:opacity-100' : 'border-primary/30 bg-primary/5 shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:border-primary/50'}
                             `}
                         >
@@ -138,7 +151,7 @@ export function NotificationsView() {
                                     <h4 className={`text-sm font-bold font-mono tracking-tight mb-2 ${notif.read ? 'text-primary/80' : 'text-white text-shadow-sm'}`}>
                                         {notif.subject}
                                     </h4>
-                                    <p className="text-xs text-primary/70 leading-relaxed font-mono">
+                                    <p className="text-xs text-primary/70 leading-relaxed font-mono line-clamp-2">
                                         {notif.message}
                                     </p>
                                 </div>
@@ -153,6 +166,57 @@ export function NotificationsView() {
             </div>
         </ScrollArea>
       </div>
+
+      <DialogRoot 
+        open={!!selectedNotification} 
+        onOpenChange={(details) => !details.open && setSelectedNotification(null)}
+      >
+        <Portal>
+          <DialogBackdrop />
+          <DialogPositioner>
+            <DialogContent className="max-w-xl border-primary/30">
+              {selectedNotification && (
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 border-b border-primary/20 pb-4">
+                    <div className={`size-12 shrink-0 flex items-center justify-center border ${TypeColor[selectedNotification.type]} shadow-glow`}>
+                         {React.createElement(TypeIcon[selectedNotification.type], { size: 24 })}
+                    </div>
+                    <div className="flex-1">
+                         <div className="flex items-center justify-between">
+                            <span className="text-xs font-black uppercase tracking-widest text-primary/60">
+                                {selectedNotification.sender}
+                            </span>
+                            <span className="text-xs font-mono text-primary/40 bg-primary/10 px-2 py-0.5 rounded">
+                                {selectedNotification.date}
+                            </span>
+                         </div>
+                         <DialogTitle className="text-xl font-bold font-mono tracking-tight mt-1 text-white">
+                           {selectedNotification.subject}
+                         </DialogTitle>
+                    </div>
+                  </div>
+                  
+                  <ScrollArea className="max-h-[60vh] pr-4">
+                    <DialogDescription className="text-sm text-primary/80 leading-relaxed font-mono whitespace-pre-wrap">
+                      {selectedNotification.message}
+                    </DialogDescription>
+                  </ScrollArea>
+
+                  <div className="flex justify-end pt-4 border-t border-primary/10">
+                      <button 
+                        onClick={() => setSelectedNotification(null)}
+                        className="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30 transition-colors"
+                      >
+                        Marcar como leído
+                      </button>
+                  </div>
+                </div>
+              )}
+              <DialogCloseTrigger />
+            </DialogContent>
+          </DialogPositioner>
+        </Portal>
+      </DialogRoot>
     </div>
   );
 }
