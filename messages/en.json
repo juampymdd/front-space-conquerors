@@ -83,7 +83,8 @@
         "tabs": {
             "planetView": "Planet View",
             "vuelos": "Flights",
-            "solarSystem": "Solar System"
+            "solarSystem": "Solar System",
+            "notifications": "Comms"
         },
         "categories": {
             "fleet": "Fleet",

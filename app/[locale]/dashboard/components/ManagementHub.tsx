@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Frame } from "@/components/ui/Frame";
 import { twMerge } from "tailwind-merge";
 import { UpgradeItem } from "./UpgradeItem";
-import { Rocket, Microscope, Shield, Globe, Atom } from "lucide-react";
+import { Rocket, Microscope, Shield, Globe, Atom, MessageSquare } from "lucide-react";
 import { TabsRoot, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 import { 
   DialogRoot, 
@@ -58,6 +58,7 @@ const UPGRADES = {
 
 import { SolarSystemView } from "./SolarSystemView";
 import { FleetMovements } from "./FleetMovements";
+import { NotificationsView } from "./NotificationsView";
 
 interface Planet {
   id: string;
@@ -93,6 +94,10 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
           <TabsTrigger value="solar" className="[&>span]:gap-2">
             <Atom size={16} />
             {t("tabs.solarSystem")}
+          </TabsTrigger>
+          <TabsTrigger value="notifications" className="[&>span]:gap-2">
+            <MessageSquare size={16} />
+            {t("tabs.notifications")}
           </TabsTrigger>
         </TabsList>
 
@@ -192,6 +197,10 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
                 </div>
               </div>
             </div>
+          </TabsContent>
+
+          <TabsContent value="notifications" className="h-full mt-0 overflow-hidden relative px-4 pb-4">
+             <NotificationsView />
           </TabsContent>
         </div>
       </TabsRoot>

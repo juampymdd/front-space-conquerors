@@ -62,7 +62,7 @@ import {
 } from "@/components/ui/Accordion";
 import { ScrollArea } from "@/components/ui/ScrollArea";
 
-function MissionCard({ movement, currentTime }: { movement: FleetMovement, currentTime: number }) {
+function MissionCard({ movement, currentTime, mounted }: { movement: FleetMovement, currentTime: number, mounted: boolean }) {
   const t = useTranslations("dashboard.movements");
   const tu = useTranslations("dashboard.upgrades.fleet");
   
@@ -161,7 +161,7 @@ function MissionCard({ movement, currentTime }: { movement: FleetMovement, curre
             const end = new Date(movement.arrivalAt).getTime();
             const total = end - start;
             const elapsed = now - start;
-            const progress = Math.min(Math.max(elapsed / total, 0), 1);
+            const progress = mounted ? Math.min(Math.max(elapsed / total, 0), 1) : 0;
             const remainingDuration = (end - now) / 1000; // in seconds
 
             return (
@@ -306,6 +306,11 @@ export function FleetMovements() {
   const t = useTranslations("dashboard.movements");
   const { fleetMovements } = useGameStore();
   const [currentTime, setCurrentTime] = useState(new Date().getTime());
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -335,7 +340,7 @@ export function FleetMovements() {
           {fleetMovements.length > 0 ? (
             <AccordionRoot defaultValue={[fleetMovements[0].id]} className="flex flex-col gap-2">
               {fleetMovements.map((movement) => (
-                <MissionCard key={movement.id} movement={movement} currentTime={currentTime} />
+                <MissionCard key={movement.id} movement={movement} currentTime={currentTime} mounted={mounted} />
               ))}
             </AccordionRoot>
           ) : (
