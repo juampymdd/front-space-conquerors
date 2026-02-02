@@ -82,12 +82,14 @@
         },
         "tabs": {
             "planetView": "Vista Planetaria",
+            "vuelos": "Vuelos",
             "solarSystem": "Sistema Solar"
         },
         "categories": {
             "fleet": "Flota",
             "techs": "Techs",
-            "defenses": "Defensas"
+            "defenses": "Defensas",
+            "movements": "Movimientos"
         },
         "buildQueue": {
             "title": "Cola de Construcción",
@@ -104,6 +106,22 @@
             "backButton": "Volver al Sistema",
             "liveFeed": "Transmisión en Vivo",
             "overlayTitle": "Superposición Táctica de Espacio Profundo"
+        },
+        "movements": {
+            "title": "Centro de Vuelos",
+            "activeMissions": "Misiones Activas",
+            "noMovements": "No hay movimientos de flota detectados",
+            "origin": "Origen",
+            "destination": "Destino",
+            "fleetUnitCount": "Composición",
+            "types": {
+                "attack": "Ataque",
+                "defend": "Defensa",
+                "transport": "Transporte",
+                "expedition": "Expedición",
+                "espionage": "Espionaje",
+                "colonize": "Colonizar"
+            }
         },
         "planetTypes": {
             "volcanic": "Volcánico",
@@ -148,6 +166,10 @@
                 "naveBatalla": {
                     "name": "Nave de Batalla",
                     "description": "El orgullo de la marina imperial. Equipada con mega-láseres y escudos de iones, es capaz de resistir castigos extremos."
+                },
+                "colonizador": {
+                    "name": "Nave Colonizadora",
+                    "description": "Nave masiva equipada con todo lo necesario para establecer una nueva colonia en planetas deshabitados."
                 }
             },
             "techs": {
@@ -237,7 +259,13 @@
                 "version": "Kernal 2.0"
             }
         },
-        "navbar": {
+        "resources": {
+      "metal": "Metal",
+      "crystal": "Cristal",
+      "deuterium": "Deuterio",
+      "energy": "Energía"
+    },
+    "navbar": {
             "subtitle": "Dominación Galáctica",
             "reactor": "Reactor",
             "shields": "Escudos",

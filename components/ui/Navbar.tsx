@@ -8,6 +8,7 @@ import {
   MenuContent, 
   MenuItem 
 } from "./Menu";
+import { ResourceHUD } from "./ResourceHUD";
 import { User, Terminal, Zap, Activity, Rocket, Settings, LogOut } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
@@ -45,22 +46,8 @@ export function Navbar() {
 
         <div className="h-8 w-[1px] bg-primary/20 mx-6" />
 
-        {/* HUD Elements */}
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-3">
-            <Zap size={14} className="text-primary animate-pulse" />
-            <div className="flex flex-col">
-              <span className="text-[9px] font-mono text-primary/40 leading-none uppercase">{t("reactor")}</span>
-              <span className="text-xs font-bold text-primary leading-none mt-1">100%</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <Activity size={14} className="text-success" />
-            <div className="flex flex-col">
-              <span className="text-[9px] font-mono text-success/40 leading-none uppercase">{t("shields")}</span>
-              <span className="text-xs font-bold text-success leading-none mt-1">{ts("nominal")}</span>
-            </div>
-          </div>
+        <div className="flex-1 px-8">
+          <ResourceHUD />
         </div>
 
         <div className="flex-1" />

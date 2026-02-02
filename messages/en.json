@@ -82,12 +82,14 @@
         },
         "tabs": {
             "planetView": "Planet View",
+            "vuelos": "Flights",
             "solarSystem": "Solar System"
         },
         "categories": {
             "fleet": "Fleet",
             "techs": "Techs",
-            "defenses": "Defenses"
+            "defenses": "Defenses",
+            "movements": "Movements"
         },
         "buildQueue": {
             "title": "Build Queue",
@@ -104,6 +106,22 @@
             "backButton": "Back to System",
             "liveFeed": "System Live Feed",
             "overlayTitle": "Deep Space Tactical Overlay"
+        },
+        "movements": {
+            "title": "Flight Center",
+            "activeMissions": "Active Missions",
+            "noMovements": "No fleet movements detected",
+            "origin": "Origin",
+            "destination": "Destination",
+            "fleetUnitCount": "Composition",
+            "types": {
+                "attack": "Attack",
+                "defend": "Defense",
+                "transport": "Transport",
+                "expedition": "Expedition",
+                "espionage": "Espionage",
+                "colonize": "Colonize"
+            }
         },
         "planetTypes": {
             "volcanic": "Volcanic",
@@ -148,6 +166,10 @@
                 "naveBatalla": {
                     "name": "Battle Ship",
                     "description": "The pride of the imperial navy. Equipped with mega-lasers and ion shields, it is capable of withstanding extreme punishment."
+                },
+                "colonizador": {
+                    "name": "Colony Ship",
+                    "description": "A massive vessel equipped with everything needed to establish new colonies on uninhabited planets."
                 }
             },
             "techs": {
@@ -237,7 +259,13 @@
                 "version": "Kernal 2.0"
             }
         },
-        "navbar": {
+        "resources": {
+      "metal": "Metal",
+      "crystal": "Crystal",
+      "deuterium": "Deuterium",
+      "energy": "Energy"
+    },
+    "navbar": {
             "subtitle": "Galactic Domination",
             "reactor": "Reactor",
             "shields": "Shields",

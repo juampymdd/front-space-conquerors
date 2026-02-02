@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Frame } from "@/components/ui/Frame";
 import { twMerge } from "tailwind-merge";
 import { UpgradeItem } from "./UpgradeItem";
-import { Rocket, Microscope, Shield, Globe } from "lucide-react";
+import { Rocket, Microscope, Shield, Globe, Atom } from "lucide-react";
 import { TabsRoot, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 import { 
   DialogRoot, 
@@ -20,48 +20,26 @@ import {
 import type { PlanetType } from "@/planet-engine/types/planet.types";
 import { useTranslations } from "next-intl";
 
-// Real paths based on generation and copying to public/assets
-const ASSET_PATHS = {
-  // Fleets
-  CazaLigero: "/assets/caza_ligero_asset_1770053976337.png",
-  CruceroPesado: "/assets/crucero_pesado_asset_1770053991074.png",
-  NaveCarga: "/assets/nave_carga_asset_1770054004940.png",
-  SondaEspionaje: "/assets/sonda_espionaje_asset_1770054019808.png",
-  Reciclador: "/assets/reciclador_asset_1770054034032.png",
-  Destructor: "/assets/destructor_asset_1770054050196.png",
-  SateliteSolar: "/assets/satelite_solar_asset_1770054063508.png",
-  NaveBatalla: "/assets/nave_batalla_asset_1770054078546.png",
-  // Techs
-  TechEnergia: "/assets/tech_energia_asset_1770054105882.png",
-  TechLaser: "/assets/tech_laser_asset_1770054119808.png",
-  TechMotores: "/assets/tech_motores_asset_1770054134914.png",
-  TechIones: "/assets/tech_iones_asset_1770054149545.png",
-  TechHiperespacio: "/assets/tech_hiperespacio_asset_1770054165187.png",
-  TechPlasma: "/assets/tech_plasma_asset_1770054178871.png",
-  // Generics
-  GenericFleet: "/assets/fleet_item_preview_1770053767921.png",
-  GenericTech: "/assets/tech_item_preview_1770053782933.png",
-  GenericDefense: "/assets/defense_item_preview_1770053798026.png",
-};
+import { ASSET_PATHS } from "@/constants/assets";
 
 const UPGRADES = {
   fleet: [
-    { key: "cazaLigero", level: 12, image: ASSET_PATHS.CazaLigero },
-    { key: "cruceroPesado", level: 4, image: ASSET_PATHS.CruceroPesado },
-    { key: "naveCarga", level: 8, image: ASSET_PATHS.NaveCarga },
-    { key: "sondaEspionaje", level: 25, image: ASSET_PATHS.SondaEspionaje },
-    { key: "reciclador", level: 10, image: ASSET_PATHS.Reciclador },
-    { key: "destructor", level: 2, image: ASSET_PATHS.Destructor },
-    { key: "sateliteSolar", level: 45, image: ASSET_PATHS.SateliteSolar },
-    { key: "naveBatalla", level: 6, image: ASSET_PATHS.NaveBatalla },
+    { key: "cazaLigero", level: 12, image: ASSET_PATHS.cazaLigero },
+    { key: "cruceroPesado", level: 4, image: ASSET_PATHS.cruceroPesado },
+    { key: "naveCarga", level: 8, image: ASSET_PATHS.naveCarga },
+    { key: "sondaEspionaje", level: 25, image: ASSET_PATHS.sondaEspionaje },
+    { key: "reciclador", level: 10, image: ASSET_PATHS.reciclador },
+    { key: "destructor", level: 2, image: ASSET_PATHS.destructor },
+    { key: "sateliteSolar", level: 45, image: ASSET_PATHS.sateliteSolar },
+    { key: "naveBatalla", level: 6, image: ASSET_PATHS.naveBatalla },
   ],
   techs: [
-    { key: "techEnergia", level: 15, image: ASSET_PATHS.TechEnergia },
-    { key: "techLaser", level: 10, image: ASSET_PATHS.TechLaser },
-    { key: "techMotores", level: 12, image: ASSET_PATHS.TechMotores },
-    { key: "techIones", level: 8, image: ASSET_PATHS.TechIones },
-    { key: "techHiperespacio", level: 5, image: ASSET_PATHS.TechHiperespacio },
-    { key: "techPlasma", level: 3, image: ASSET_PATHS.TechPlasma },
+    { key: "techEnergia", level: 15, image: ASSET_PATHS.techEnergia },
+    { key: "techLaser", level: 10, image: ASSET_PATHS.techLaser },
+    { key: "techMotores", level: 12, image: ASSET_PATHS.techMotores },
+    { key: "techIones", level: 8, image: ASSET_PATHS.techIones },
+    { key: "techHiperespacio", level: 5, image: ASSET_PATHS.techHiperespacio },
+    { key: "techPlasma", level: 3, image: ASSET_PATHS.techPlasma },
     { key: "researchNetwork", level: 4, image: ASSET_PATHS.GenericTech },
     { key: "astrophysics", level: 11, image: ASSET_PATHS.GenericTech },
   ],
@@ -78,6 +56,7 @@ const UPGRADES = {
 };
 
 import { SolarSystemView } from "./SolarSystemView";
+import { FleetMovements } from "./FleetMovements";
 
 interface Planet {
   id: string;
@@ -102,10 +81,16 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
     <div className="flex flex-col h-full">
       <TabsRoot defaultValue="planet" className="flex-1 flex flex-col min-h-0 gap-0">
         <TabsList className="px-0 relative z-20">
-          <TabsTrigger value="planet">
+          <TabsTrigger value="planet" className="[&>span]:gap-2">
+            <Globe size={16} />
             {t("tabs.planetView")}
           </TabsTrigger>
-          <TabsTrigger value="solar">
+          <TabsTrigger value="vuelos" className="[&>span]:gap-2">
+            <Rocket size={16} />
+            {t("tabs.vuelos")}
+          </TabsTrigger>
+          <TabsTrigger value="solar" className="[&>span]:gap-2">
+            <Atom size={16} />
             {t("tabs.solarSystem")}
           </TabsTrigger>
         </TabsList>
@@ -118,21 +103,21 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
                 <TabsList className="w-48 flex flex-col gap-3 px-0 border-none shrink-0">
                   <TabsTrigger 
                     value="fleet"
-                    className="w-full justify-start gap-4 h-auto py-5 px-6 data-[selected]:border-primary"
+                    className="w-full [&>span]:justify-start [&>span]:gap-4 h-auto py-5 px-6 data-[selected]:border-primary"
                   >
                     <Rocket size={18} className="shrink-0" />
                     <span className="text-sm font-bold uppercase tracking-widest text-left">{t("categories.fleet")}</span>
                   </TabsTrigger>
                   <TabsTrigger 
                     value="techs"
-                    className="w-full justify-start gap-4 h-auto py-5 px-6 data-[selected]:border-primary"
+                    className="w-full [&>span]:justify-start [&>span]:gap-4 h-auto py-5 px-6 data-[selected]:border-primary"
                   >
                     <Microscope size={18} className="shrink-0" />
                     <span className="text-sm font-bold uppercase tracking-widest text-left">{t("categories.techs")}</span>
                   </TabsTrigger>
                   <TabsTrigger 
                     value="defenses"
-                    className="w-full justify-start gap-4 h-auto py-5 px-6 data-[selected]:border-primary"
+                    className="w-full [&>span]:justify-start [&>span]:gap-4 h-auto py-5 px-6 data-[selected]:border-primary"
                   >
                     <Shield size={18} className="shrink-0" />
                     <span className="text-sm font-bold uppercase tracking-widest text-left">{t("categories.defenses")}</span>
@@ -170,6 +155,10 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
                 </div>
               </div>
             </TabsRoot>
+          </TabsContent>
+
+          <TabsContent value="vuelos" className="h-full mt-0 px-8 pt-8 pb-4 overflow-hidden">
+            <FleetMovements />
           </TabsContent>
 
           <TabsContent value="solar" className="h-full mt-0 overflow-hidden relative px-4 pb-4">

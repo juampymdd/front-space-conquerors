@@ -1,7 +1,7 @@
 
 import { twMerge } from "tailwind-merge";
 import { Frame } from "./Frame";
-import { ChevronDown, FilePenLine } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Accordion } from "@ark-ui/react/accordion";
 
 function AccordionRoot({
@@ -60,7 +60,7 @@ function AccordionTrigger({
       ])}
       {...rest}
     >
-      <FilePenLine className="size-4.5 me-2.5" /> {children}
+      {children}
       <ChevronDown className="ms-auto size-4 group-data-[state=open]:rotate-180" />
     </Accordion.ItemTrigger>
   );
