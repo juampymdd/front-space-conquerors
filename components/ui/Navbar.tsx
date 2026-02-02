@@ -1,7 +1,14 @@
 import React from "react";
 import { Frame } from "./Frame";
 import { Button } from "./Button";
-import { User, Terminal, Zap, Activity, Rocket } from "lucide-react";
+import { 
+  MenuRoot, 
+  MenuTrigger, 
+  MenuPositioner, 
+  MenuContent, 
+  MenuItem 
+} from "./Menu";
+import { User, Terminal, Zap, Activity, Rocket, Settings, LogOut } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
 export function Navbar() {
@@ -68,17 +75,38 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3 pl-4 border-l border-primary/20">
-            <div className="text-right hidden sm:block">
-              <div className="text-xs font-bold text-primary uppercase leading-none">Cmdr. Juamp</div>
-              <div className="text-[10px] font-mono text-primary/40 uppercase leading-none mt-1.5 tracking-tighter">
-                {ts("level")} 42 // ALPHA
+          <MenuRoot>
+            <MenuTrigger asChild>
+              <div className="flex items-center gap-3 pl-4 border-l border-primary/20 cursor-pointer group">
+                <div className="text-right hidden sm:block">
+                  <div className="text-xs font-bold text-primary uppercase leading-none group-hover:text-shadow-glow transition-all">Cmdr. Juamp</div>
+                  <div className="text-[10px] font-mono text-primary/40 uppercase leading-none mt-1.5 tracking-tighter">
+                    {ts("level")} 42 // ALPHA
+                  </div>
+                </div>
+                <div className="size-10 border border-primary/30 bg-primary/10 flex items-center justify-center group-hover:border-primary transition-colors">
+                  <User className="size-5 text-primary" />
+                </div>
               </div>
-            </div>
-            <div className="size-10 border border-primary/30 bg-primary/10 flex items-center justify-center cursor-pointer hover:border-primary transition-colors">
-              <User className="size-5 text-primary" />
-            </div>
-          </div>
+            </MenuTrigger>
+            <MenuPositioner>
+              <MenuContent className="min-w-[200px]">
+                <MenuItem value="profile" className="gap-3 font-mono text-[10px] uppercase tracking-widest">
+                  <User className="size-3.5" />
+                  {t("userMenu.profile")}
+                </MenuItem>
+                <MenuItem value="settings" className="gap-3 font-mono text-[10px] uppercase tracking-widest">
+                  <Settings className="size-3.5" />
+                  {t("userMenu.settings")}
+                </MenuItem>
+                <div className="h-px bg-primary/20 my-1" />
+                <MenuItem value="logout" className="gap-3 text-destructive font-mono text-[10px] uppercase tracking-widest">
+                  <LogOut className="size-3.5" />
+                  {t("userMenu.logout")}
+                </MenuItem>
+              </MenuContent>
+            </MenuPositioner>
+          </MenuRoot>
         </div>
       </div>
     </nav>

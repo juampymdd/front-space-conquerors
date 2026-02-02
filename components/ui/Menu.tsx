@@ -8,6 +8,8 @@ import { Portal } from "@ark-ui/react/portal";
 import { Button } from "./Button";
 import { Frame } from "./Frame";
 
+import { useMemo } from "react";
+
 function MenuRoot({
   children,
   ...rest
@@ -49,7 +51,7 @@ function MenuPositioner({
 }: React.ComponentProps<typeof Menu.Positioner>) {
   return (
     <Portal>
-      <Menu.Positioner className={className} {...rest}>
+      <Menu.Positioner className={twMerge("z-[100000]", className)} style={{ zIndex: 100000 }} {...rest}>
         {children}
       </Menu.Positioner>
     </Portal>
@@ -61,29 +63,46 @@ function MenuContent({
   className,
   ...rest
 }: React.ComponentProps<typeof Menu.Content>) {
+  const paths = useMemo(() => [
+    {
+      show: true,
+      style: { strokeWidth: "1", stroke: "var(--color-frame-1-stroke)", fill: "var(--color-frame-1-fill)" },
+      path: [["M", "14", "6"], ["L", "50% - 7", "6"], ["L", "50% - 2", "0"], ["L", "50% + 4", "0"], ["L", "50% + 9", "6"], ["L", "100% - 13", "6"], ["L", "100% + 0", "19"], ["L", "100% + 0", "100% - 26"], ["L", "100% - 13", "100% - 12"], ["L", "50% + 13", "100% - 12"], ["L", "50% - 0", "100% + 0"], ["L", "0% + 14", "100% + 0"], ["L", "0% + 0", "100% - 13"], ["L", "0", "0% + 19"], ["L", "14", "6"]]
+    },
+    {
+      show: true,
+      style: { strokeWidth: "1", stroke: "var(--color-accent)", fill: "var(--color-accent)" },
+      path: [["M", "100% - 18", "100% - 10"], ["L", "100% - 26", "100% - 10"], ["L", "100% - 31", "100% - 4.5"], ["L", "100% - 23", "100% - 4.5"], ["L", "100% - 18", "100% - 10"]]
+    },
+    {
+      show: true,
+      style: { strokeWidth: "1", stroke: "var(--color-accent)", fill: "var(--color-accent)" },
+      path: [["M", "100% - 31", "100% - 10"], ["L", "100% - 39", "100% - 10"], ["L", "100% - 44", "100% - 4.5"], ["L", "100% - 36", "100% - 4.5"], ["L", "100% - 31", "100% - 10"]]
+    },
+    {
+      show: true,
+      style: { strokeWidth: "1", stroke: "var(--color-accent)", fill: "var(--color-accent)" },
+      path: [["M", "100% - 44", "100% - 10"], ["L", "100% - 52", "100% - 10"], ["L", "100% - 57", "100% - 4.5"], ["L", "100% - 49", "100% - 4.5"], ["L", "100% - 44", "100% - 10"]]
+    }
+  ] as any, []);
+
   return (
     <Menu.Content
       className={twMerge([
-        "group relative min-w-(--reference-width) px-6 py-7 outline-none mt-1.5",
+        "group relative min-w-(--reference-width) px-6 py-7 outline-none mt-4 backdrop-blur-xl",
         "[&[data-state='open']]:animate-in [&[data-state='open']]:zoom-in-80 [&[data-state='open']]:fade-in-0 [&[data-state='open']]:duration-200 [&[data-state='open'][data-placement='bottom-start']]:slide-in-from-top-2 [&[data-state='open'][data-placement='left-start']]:slide-in-from-right-2 [&[data-state='open'][data-placement='right-start']]:slide-in-from-left-2 [&[data-state='open'][data-placement='top-start']]:slide-in-from-bottom-2",
         "[&[data-state='closed']]:animate-out [&[data-state='closed']]:zoom-out-80 [&[data-state='closed']]:fade-out-0 [&[data-state='closed']]:duration-200",
+        "z-[100000]",
         "[--color-frame-1-stroke:var(--color-primary)]",
-        "[--color-frame-1-fill:var(--color-primary)]/20",
+        "[--color-frame-1-fill:var(--color-primary)]/10",
         "[--color-frame-2-stroke:var(--color-accent)]",
-        "[--color-frame-2-fill:var(--color-accent)]/40",
-        "[--color-frame-3-stroke:var(--color-accent)]",
-        "[--color-frame-3-fill:var(--color-accent)]/40",
-        "[--color-frame-4-stroke:var(--color-accent)]",
-        "[--color-frame-4-fill:var(--color-accent)]/40",
         className,
       ])}
       {...rest}
     >
       <div className="absolute inset-0 group-data-[placement=top-start]:scale-y-[-1]">
         <Frame
-          paths={JSON.parse(
-            '[{"show":false,"style":{"strokeWidth":"1","stroke":"var(--color-frame-1-stroke)","fill":"var(--color-frame-1-fill)"},"path":[["M","14","6"],["L","50% - 7","6"],["L","50% - 2","0"],["L","50% + 4","0"],["L","50% + 9","6"],["L","100% - 13","6"],["L","100% + 0","19"],["L","100% + 0","100% - 26"],["L","100% - 13","100% - 12"],["L","50% + 13","100% - 12"],["L","50% - 0","100% + 0"],["L","0% + 14","100% + 0"],["L","0% + 0","100% - 13"],["L","0","0% + 19"],["L","14","6"]]},{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-2-stroke)","fill":"var(--color-frame-2-fill)"},"path":[["M","50% + 16","100% - 8"],["L","50% + 25","100% - 8"],["L","50% + 18","100% - 2"],["L","50% + 9","100% - 2"],["L","50% + 16","100% - 8"]]},{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-3-stroke)","fill":"var(--color-frame-3-fill)"},"path":[["M","50% + 30","100% - 8"],["L","50% + 37","100% - 8"],["L","50% + 32","100% - 3"],["L","50% + 25","100% - 3"],["L","50% + 30","100% - 8"]]},{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-4-stroke)","fill":"var(--color-frame-4-fill)"},"path":[["M","50% + 42","100% - 8"],["L","50% + 48","100% - 8"],["L","50% + 44","100% - 4"],["L","50% + 38","100% - 4"],["L","50% + 42","100% - 8"]]}]'
-          )}
+          paths={paths}
           enableBackdropBlur={true}
         />
       </div>
@@ -103,11 +122,14 @@ function MenuItem({
       {!asChild ? (
         <div
           className={twMerge([
-            "cursor-pointer flex items-center -mx-3 -my-0.5 px-3 py-0.5 border border-transparent hover:border-primary/30 hover:bg-primary/10 data-[highlighted]:border-primary/30 data-[highlighted]:bg-primary/10",
+            "cursor-pointer flex items-center -mx-3 px-4 py-2 border border-transparent hover:border-primary/40 hover:bg-primary/10 data-[highlighted]:border-primary/40 data-[highlighted]:bg-primary/10 transition-all duration-200 group/item outline-none",
             className,
           ])}
         >
-          {children}
+          <div className="flex-1 flex items-center gap-3">
+            {children}
+          </div>
+          <div className="size-1.5 bg-primary shadow-[0_0_8px_var(--color-primary)] transition-all opacity-0 group-hover/item:opacity-100" />
         </div>
       ) : (
         children

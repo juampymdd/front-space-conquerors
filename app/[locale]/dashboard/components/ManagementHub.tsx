@@ -7,6 +7,16 @@ import { twMerge } from "tailwind-merge";
 import { UpgradeItem } from "./UpgradeItem";
 import { Rocket, Microscope, Shield, Globe } from "lucide-react";
 import { TabsRoot, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
+import { 
+  DialogRoot, 
+  DialogBackdrop, 
+  DialogPositioner, 
+  DialogContent, 
+  DialogTitle, 
+  DialogDescription, 
+  DialogCloseTrigger,
+  Portal 
+} from "@/components/ui/Dialog";
 import type { PlanetType } from "@/planet-engine/types/planet.types";
 import { useTranslations } from "next-intl";
 
@@ -82,6 +92,11 @@ interface ManagementHubProps {
 
 export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
   const t = useTranslations("dashboard");
+  const [selectedItem, setSelectedItem] = useState<{
+    key: string;
+    tab: string;
+    image: string;
+  } | null>(null);
 
   return (
     <div className="flex flex-col h-full">
@@ -143,9 +158,10 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
                         {UPGRADES[tab].map((item, idx) => (
                           <UpgradeItem 
                             key={idx} 
-                            name={t(`upgrades.${tab}.${item.key}`)} 
+                            name={t(`upgrades.${tab}.${item.key}.name`)} 
                             level={item.level} 
                             imageUrl={item.image}
+                            onInfoClick={() => setSelectedItem({ ...item, tab })}
                           />
                         ))}
                       </div>
@@ -187,6 +203,42 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
           </TabsContent>
         </div>
       </TabsRoot>
+
+      <DialogRoot 
+        open={!!selectedItem} 
+        onOpenChange={(details) => !details.open && setSelectedItem(null)}
+      >
+        <Portal>
+          <DialogBackdrop />
+          <DialogPositioner>
+            <DialogContent className="max-w-2xl">
+              {selectedItem && (
+                <div className="space-y-6">
+                  <div className="relative h-64 w-full overflow-hidden border border-primary/20 bg-black/40">
+                    <img 
+                      src={selectedItem.image} 
+                      alt={t(`upgrades.${selectedItem.tab}.${selectedItem.key}.name`)}
+                      className="w-full h-full object-cover opacity-80"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent" />
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <DialogTitle className="text-3xl font-black italic tracking-tighter uppercase text-primary">
+                      {t(`upgrades.${selectedItem.tab}.${selectedItem.key}.name`)}
+                    </DialogTitle>
+                    <div className="h-px w-full bg-primary/20" />
+                    <DialogDescription className="text-lg text-primary/80 leading-relaxed font-mono">
+                      {t(`upgrades.${selectedItem.tab}.${selectedItem.key}.description`)}
+                    </DialogDescription>
+                  </div>
+                </div>
+              )}
+              <DialogCloseTrigger />
+            </DialogContent>
+          </DialogPositioner>
+        </Portal>
+      </DialogRoot>
     </div>
   );
 }

@@ -117,34 +117,106 @@
         "upgrades": {
             "level": "Level",
             "fleet": {
-                "cazaLigero": "Light Fighter",
-                "cruceroPesado": "Heavy Cruiser",
-                "naveCarga": "Cargo Ship",
-                "sondaEspionaje": "Espionage Probe",
-                "reciclador": "Recycler",
-                "destructor": "Destroyer",
-                "sateliteSolar": "Solar Satellite",
-                "naveBatalla": "Battle Ship"
+                "cazaLigero": {
+                    "name": "Light Fighter",
+                    "description": "A light and fast attack ship. Its low production cost allows for large swarms to overwhelm enemy defenses."
+                },
+                "cruceroPesado": {
+                    "name": "Heavy Cruiser",
+                    "description": "Almost three times more armored than a Light Fighter and with superior firepower, it's the backbone of any combat fleet."
+                },
+                "naveCarga": {
+                    "name": "Cargo Ship",
+                    "description": "Specifically designed for mass transport of resources between systems. It is slow and vulnerable, but its capacity is unmatched."
+                },
+                "sondaEspionaje": {
+                    "name": "Espionage Probe",
+                    "description": "Small unmanned ship equipped with advanced sensors. Allows obtaining critical information about enemy planets."
+                },
+                "reciclador": {
+                    "name": "Recycler",
+                    "description": "Ship specialized in collecting debris in orbits after a battle. Vital for recovering lost minerals and crystals."
+                },
+                "destructor": {
+                    "name": "Destroyer",
+                    "description": "A true floating fortress. Its sole purpose is the total annihilation of enemy fleets and heavy planetary defenses."
+                },
+                "sateliteSolar": {
+                    "name": "Solar Satellite",
+                    "description": "Simple but effective orbital power platform. Provides constant power to the planet using radiation from the local star."
+                },
+                "naveBatalla": {
+                    "name": "Battle Ship",
+                    "description": "The pride of the imperial navy. Equipped with mega-lasers and ion shields, it is capable of withstanding extreme punishment."
+                }
             },
             "techs": {
-                "techEnergia": "Energy Technology",
-                "techLaser": "Laser Technology",
-                "techMotores": "Drive Technology",
-                "techIones": "Ion Technology",
-                "techHiperespacio": "Hyperspace Technology",
-                "techPlasma": "Plasma Technology",
-                "researchNetwork": "Intergalactic Research Network",
-                "astrophysics": "Astrophysics"
+                "techEnergia": {
+                    "name": "Energy Technology",
+                    "description": "Improves the efficiency of all energy systems. It is the fundamental requirement for developing new advanced technologies."
+                },
+                "techLaser": {
+                    "name": "Laser Technology",
+                    "description": "Development of concentrated light systems for weapons and shields. Increases the firepower of light ships and defenses."
+                },
+                "techMotores": {
+                    "name": "Drive Technology",
+                    "description": "Research on chemical propulsion and impulse systems. Significantly increases the speed of all your ships."
+                },
+                "techIones": {
+                    "name": "Ion Technology",
+                    "description": "Utilization of charged particles to create disruptive weapons and more resistant shields. Fundamental for medium-class ships."
+                },
+                "techHiperespacio": {
+                    "name": "Hyperspace Technology",
+                    "description": "Allows ships to perform jumps through folded dimensions, drastically reducing interstellar travel time."
+                },
+                "techPlasma": {
+                    "name": "Plasma Technology",
+                    "description": "The final evolution of thermal weaponry. Generates spheres of ionized matter of immense destructive power."
+                },
+                "researchNetwork": {
+                    "name": "Intergalactic Research Network",
+                    "description": "Connects labs from different planets to share data, drastically reducing total research time."
+                },
+                "astrophysics": {
+                    "name": "Astrophysics",
+                    "description": "Advanced study of the cosmos. Allows colonization of new planets and improves the expedition capacity of your fleets."
+                }
             },
             "defenses": {
-                "missileLauncher": "Rocket Launcher",
-                "smallLaser": "Small Laser",
-                "largeLaser": "Large Laser",
-                "gaussCannon": "Gauss Cannon",
-                "ionCannon": "Ion Cannon",
-                "plasmaCannon": "Plasma Turret",
-                "smallShield": "Small Shield Dome",
-                "largeShield": "Large Shield Dome"
+                "missileLauncher": {
+                    "name": "Rocket Launcher",
+                    "description": "Basic and cheap defense that launches kinetic projectiles. Effective against small ships in large quantities."
+                },
+                "smallLaser": {
+                    "name": "Small Laser",
+                    "description": "A reliable defensive system using concentrated light. Has excellent aim against light fighters."
+                },
+                "largeLaser": {
+                    "name": "Large Laser",
+                    "description": "Improved version of the small laser with a more powerful capacitor. Capable of piercing heavy cruiser armor."
+                },
+                "gaussCannon": {
+                    "name": "Gauss Cannon",
+                    "description": "Electromagnetic accelerator that fires metallic projectiles at hypersonic speeds. Ignores much of enemy shields."
+                },
+                "ionCannon": {
+                    "name": "Ion Cannon",
+                    "description": "Fires bursts of ions that overload the electronic systems of attacking ships, momentaneously disabling them."
+                },
+                "plasmaCannon": {
+                    "name": "Plasma Turret",
+                    "description": "The deadliest planetary defense. Fires a plasma sphere capable of vaporizing almost any ship with a single impact."
+                },
+                "smallShield": {
+                    "name": "Small Shield Dome",
+                    "description": "Tactical field generator that envelops the planet. Provides an extra layer of protection against minor bombardments."
+                },
+                "largeShield": {
+                    "name": "Large Shield Dome",
+                    "description": "A massive energy shield. Requires an immense amount of energy but can withstand impacts from heavy battleships."
+                }
             }
         },
         "mainSidebar": {
@@ -173,6 +245,11 @@
                 "fleet": "Fleet",
                 "map": "Map",
                 "intel": "Intel"
+            },
+            "userMenu": {
+                "profile": "Commander Profile",
+                "settings": "System Settings",
+                "logout": "Terminate Link"
             }
         },
         "status": {

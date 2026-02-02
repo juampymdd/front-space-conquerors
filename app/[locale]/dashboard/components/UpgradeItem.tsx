@@ -9,11 +9,15 @@ interface UpgradeItemProps {
   imageUrl?: string;
   onIncrease?: () => void;
   onDecrease?: () => void;
+  onInfoClick?: () => void;
 }
 
-export function UpgradeItem({ name, level, imageUrl, onIncrease, onDecrease }: UpgradeItemProps) {
+export function UpgradeItem({ name, level, imageUrl, onIncrease, onDecrease, onInfoClick }: UpgradeItemProps) {
   return (
-    <div className="relative group overflow-hidden flex flex-col h-full">
+    <div 
+      className="relative group overflow-hidden flex flex-col h-full cursor-pointer border border-transparent hover:border-primary/50 transition-colors"
+      onClick={onInfoClick}
+    >
       <div className="absolute inset-0 -z-10">
         <Frame
           paths={JSON.parse(
@@ -48,7 +52,10 @@ export function UpgradeItem({ name, level, imageUrl, onIncrease, onDecrease }: U
         
         <div className="flex items-center justify-between gap-3 px-1">
           <button 
-            onClick={onDecrease}
+            onClick={(e) => {
+              e.stopPropagation();
+              onDecrease?.();
+            }}
             className="size-7 border border-primary/20 bg-primary/5 flex items-center justify-center text-primary/50 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all text-sm font-bold skew-x-[-15deg]"
           >
             <span className="skew-x-[15deg]">-</span>
@@ -64,7 +71,10 @@ export function UpgradeItem({ name, level, imageUrl, onIncrease, onDecrease }: U
           </div>
           
           <button 
-            onClick={onIncrease}
+            onClick={(e) => {
+              e.stopPropagation();
+              onIncrease?.();
+            }}
             className="size-7 border border-primary/20 bg-primary/5 flex items-center justify-center text-primary/50 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all text-sm font-bold skew-x-[-15deg]"
           >
             <span className="skew-x-[15deg]">+</span>

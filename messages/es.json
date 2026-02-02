@@ -117,34 +117,106 @@
         "upgrades": {
             "level": "Nivel",
             "fleet": {
-                "cazaLigero": "Caza Ligero",
-                "cruceroPesado": "Crucero Pesado",
-                "naveCarga": "Nave de Carga",
-                "sondaEspionaje": "Sonda de Espionaje",
-                "reciclador": "Reciclador",
-                "destructor": "Destructor",
-                "sateliteSolar": "Satélite Solar",
-                "naveBatalla": "Nave de Batalla"
+                "cazaLigero": {
+                    "name": "Caza Ligero",
+                    "description": "Nave de ataque ligera y veloz. Su bajo coste de producción permite desplegar grandes enjambres para abrumar las defensas enemigas."
+                },
+                "cruceroPesado": {
+                    "name": "Crucero Pesado",
+                    "description": "Casi tres veces más blindado que un Caza Ligero y con una potencia de fuego superior, es la columna vertebral de cualquier flota de combate."
+                },
+                "naveCarga": {
+                    "name": "Nave de Carga",
+                    "description": "Diseñada específicamente para el transporte masivo de recursos entre sistemas. Es lenta y vulnerable, pero su capacidad es inigualable."
+                },
+                "sondaEspionaje": {
+                    "name": "Sonda de Espionaje",
+                    "description": "Pequeña nave no tripulada equipada con sensores avanzados. Permite obtener información crítica sobre los planetas enemigos."
+                },
+                "reciclador": {
+                    "name": "Reciclador",
+                    "description": "Nave especializada en la recolección de escombros en órbitas tras una batalla. Vital para recuperar minerales y cristales perdidos."
+                },
+                "destructor": {
+                    "name": "Destructor",
+                    "description": "Una auténtica fortaleza volante. Su único propósito es la aniquilación total de flotas enemigas y defensas planetarias pesadas."
+                },
+                "sateliteSolar": {
+                    "name": "Satélite Solar",
+                    "description": "Plataforma de energía orbital simple pero efectiva. Proporciona energía constante al planeta utilizando la radiación de la estrella local."
+                },
+                "naveBatalla": {
+                    "name": "Nave de Batalla",
+                    "description": "El orgullo de la marina imperial. Equipada con mega-láseres y escudos de iones, es capaz de resistir castigos extremos."
+                }
             },
             "techs": {
-                "techEnergia": "Tecnología de Energía",
-                "techLaser": "Tecnología Láser",
-                "techMotores": "Tecnología de Motores",
-                "techIones": "Tecnología de Iones",
-                "techHiperespacio": "Tecnología de Hiperespacio",
-                "techPlasma": "Tecnología de Plasma",
-                "researchNetwork": "Red de Investigación",
-                "astrophysics": "Astrofísica"
+                "techEnergia": {
+                    "name": "Tecnología de Energía",
+                    "description": "Mejora la eficiencia de todos los sistemas energéticos. Es el requisito fundamental para el desarrollo de nuevas tecnologías avanzadas."
+                },
+                "techLaser": {
+                    "name": "Tecnología Láser",
+                    "description": "Desarrollo de sistemas de luz concentrada para armas y escudos. Aumenta la potencia de fuego de las naves ligeras y defensas."
+                },
+                "techMotores": {
+                    "name": "Tecnología de Motores",
+                    "description": "Investigación en sistemas de propulsión química y de impulsión. Aumenta significativamente la velocidad de todas tus naves."
+                },
+                "techIones": {
+                    "name": "Tecnología de Iones",
+                    "description": "Utilización de partículas cargadas para crear armas disruptivas y escudos más resistentes. Fundamental para naves de clase media."
+                },
+                "techHiperespacio": {
+                    "name": "Tecnología de Hiperespacio",
+                    "description": "Permite a las naves realizar saltos a través de dimensiones plegadas, reduciendo drásticamente el tiempo de viaje interestelar."
+                },
+                "techPlasma": {
+                    "name": "Tecnología de Plasma",
+                    "description": "La evolución final del armamento térmico. Genera esferas de materia ionizada de una potencia destructiva inmensa."
+                },
+                "researchNetwork": {
+                    "name": "Red de Investigación",
+                    "description": "Conecta laboratorios de diferentes planetas para compartir datos, reduciendo drásticamente el tiempo total de investigación."
+                },
+                "astrophysics": {
+                    "name": "Astrofísica",
+                    "description": "Estudio avanzado del cosmos. Permite la colonización de nuevos planetas y mejora la capacidad de expedición de tus flotas."
+                }
             },
             "defenses": {
-                "missileLauncher": "Lanzamisiles",
-                "smallLaser": "Láser Pequeño",
-                "largeLaser": "Láser Grande",
-                "gaussCannon": "Cañón de Gauss",
-                "ionCannon": "Cañón de Iones",
-                "plasmaCannon": "Cañón de Plasma",
-                "smallShield": "Cúpula Pequeña",
-                "largeShield": "Cúpula Grande"
+                "missileLauncher": {
+                    "name": "Lanzamisiles",
+                    "description": "Defensa básica y barata que lanza proyectiles cinéticos. Efectiva contra naves pequeñas en grandes cantidades."
+                },
+                "smallLaser": {
+                    "name": "Láser Pequeño",
+                    "description": "Un sistema defensivo fiable que utiliza luz concentrada. Tiene una excelente puntería contra cazas ligeros."
+                },
+                "largeLaser": {
+                    "name": "Láser Grande",
+                    "description": "Versión mejorada del láser pequeño con un condensador más potente. Capaz de perforar el blindaje de cruceros pesados."
+                },
+                "gaussCannon": {
+                    "name": "Cañón de Gauss",
+                    "description": "Acelerador electromagnético que dispara proyectiles metálicos a velocidades hipersónicas. Ignora gran parte de los escudos enemigos."
+                },
+                "ionCannon": {
+                    "name": "Cañón de Iones",
+                    "description": "Dispara ráfagas de iones que sobrecargan los sistemas electrónicos de las naves atacantes, inutilizándolas momentáneamente."
+                },
+                "plasmaCannon": {
+                    "name": "Cañón de Plasma",
+                    "description": "La defensa planetaria más letal. Dispara una esfera de plasma capaz de vaporizar casi cualquier nave de un solo impacto."
+                },
+                "smallShield": {
+                    "name": "Cúpula Pequeña",
+                    "description": "Generador de campo táctico que envuelve el planeta. Proporciona una capa adicional de protección contra bombardeos menores."
+                },
+                "largeShield": {
+                    "name": "Cúpula Grande",
+                    "description": "Un escudo energético masivo. Requiere una cantidad inmensa de energía pero puede resistir impactos de naves de batalla pesadas."
+                }
             }
         },
         "mainSidebar": {
@@ -173,6 +245,11 @@
                 "fleet": "Flota",
                 "map": "Mapa",
                 "intel": "Inteligencia"
+            },
+            "userMenu": {
+                "profile": "Perfil del Comandante",
+                "settings": "Configuración del Sistema",
+                "logout": "Terminar Conexión"
             }
         },
         "status": {
