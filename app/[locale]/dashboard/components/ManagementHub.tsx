@@ -17,6 +17,7 @@ import {
   DialogCloseTrigger,
   Portal 
 } from "@/components/ui/Dialog";
+import { ScrollArea } from "@/components/ui/ScrollArea";
 import type { PlanetType } from "@/planet-engine/types/planet.types";
 import { useTranslations } from "next-intl";
 
@@ -137,19 +138,21 @@ export function ManagementHub({ selectedPlanet }: ManagementHubProps) {
                     <TabsContent 
                       key={tab} 
                       value={tab} 
-                      className="h-full mt-0 px-8 pt-8 pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent overflow-y-auto"
+                      className="h-full mt-0 pt-0 pb-0 overflow-hidden"
                     >
-                      <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-4 gap-4 pb-8">
-                        {UPGRADES[tab].map((item, idx) => (
-                          <UpgradeItem 
-                            key={idx} 
-                            name={t(`upgrades.${tab}.${item.key}.name`)} 
-                            level={item.level} 
-                            imageUrl={item.image}
-                            onInfoClick={() => setSelectedItem({ ...item, tab })}
-                          />
-                        ))}
-                      </div>
+                      <ScrollArea className="h-full px-8 pt-8 pb-4">
+                        <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-4 gap-4 pb-8">
+                          {UPGRADES[tab].map((item, idx) => (
+                            <UpgradeItem 
+                              key={idx} 
+                              name={t(`upgrades.${tab}.${item.key}.name`)} 
+                              level={item.level} 
+                              imageUrl={item.image}
+                              onInfoClick={() => setSelectedItem({ ...item, tab })}
+                            />
+                          ))}
+                        </div>
+                      </ScrollArea>
                     </TabsContent>
                   ))}
                 </div>

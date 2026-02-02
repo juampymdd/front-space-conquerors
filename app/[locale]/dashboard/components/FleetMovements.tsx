@@ -60,6 +60,7 @@ import {
   AccordionTrigger, 
   AccordionContent 
 } from "@/components/ui/Accordion";
+import { ScrollArea } from "@/components/ui/ScrollArea";
 
 function MissionCard({ movement, currentTime }: { movement: FleetMovement, currentTime: number }) {
   const t = useTranslations("dashboard.movements");
@@ -329,21 +330,23 @@ export function FleetMovements() {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-        {fleetMovements.length > 0 ? (
-          <AccordionRoot defaultValue={[fleetMovements[0].id]}>
-            {fleetMovements.map((movement) => (
-              <MissionCard key={movement.id} movement={movement} currentTime={currentTime} />
-            ))}
-          </AccordionRoot>
-        ) : (
-          <div className="h-64 flex flex-col items-center justify-center border border-primary/5 bg-primary/[0.02]">
-            <Rocket size={48} className="text-primary/10 mb-4" />
-            <span className="text-sm font-mono text-primary/40 uppercase tracking-[0.4em]">
-              {t("noMovements")}
-            </span>
-          </div>
-        )}
+      <div className="flex-1 min-h-0 relative -mr-6 pr-6">
+        <ScrollArea className="h-full pr-4 pb-4">
+          {fleetMovements.length > 0 ? (
+            <AccordionRoot defaultValue={[fleetMovements[0].id]} className="flex flex-col gap-2">
+              {fleetMovements.map((movement) => (
+                <MissionCard key={movement.id} movement={movement} currentTime={currentTime} />
+              ))}
+            </AccordionRoot>
+          ) : (
+            <div className="h-full flex flex-col items-center justify-center text-primary/30 gap-4">
+              <div className="size-20 rounded-full border-2 border-dashed border-primary/20 flex items-center justify-center animate-spin-slow">
+                 <Rocket size={32} className="opacity-50" />
+              </div>
+              <p className="font-mono text-sm uppercase tracking-widest">{t("noMovements")}</p>
+            </div>
+          )}
+        </ScrollArea>
       </div>
     </div>
   );
