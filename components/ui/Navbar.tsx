@@ -1,0 +1,86 @@
+import React from "react";
+import { Frame } from "./Frame";
+import { Button } from "./Button";
+import { User, Terminal, Zap, Activity, Rocket } from "lucide-react";
+import { useTranslations } from 'next-intl';
+
+export function Navbar() {
+  const t = useTranslations("dashboard.navbar");
+  const ts = useTranslations("dashboard.status");
+
+  return (
+    <nav className="relative h-28 w-full flex items-center px-6 z-50">
+      {/* Background Frame (Landing style) */}
+      <div className="absolute inset-0 -z-10 [&>svg]:drop-shadow-[0_0px_20px_var(--color-primary)] [--color-frame-1-stroke:var(--color-primary)] [--color-frame-1-fill:var(--color-primary)]/20 [--color-frame-2-stroke:var(--color-primary)] [--color-frame-2-fill:transparent] [--color-frame-3-stroke:var(--color-accent)] [--color-frame-3-fill:var(--color-accent)]/50">
+        <Frame
+          paths={JSON.parse(
+            '[{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-1-stroke)","fill":"var(--color-frame-1-fill)"},"path":[["M","0% + 34","7"],["L","0% + 79.5","7"],["L","0% + 96.5","13"],["L","100% - 21.5","13"],["L","100% + 0","34"],["L","100% - 13","100% - 15"],["L","100% - 26","100% - 6"],["L","0% + 11.5","100% - 6"],["L","0","100% - 18"],["L","13","0% + 28"],["L","34","7"]]},{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-2-stroke)","fill":"var(--color-frame-2-fill)"},"path":[["M","18","100% - 6"],["L","100% - 33.5","100% - 6"],["L","100% - 39.5","100% - 0"],["L","24","100% + 0"],["L","18","100% - 6"]]},{"show":true,"style":{"strokeWidth":"1","stroke":"var(--color-frame-3-stroke)","fill":"var(--color-frame-3-fill)"},"path":[["M","17","7"],["L","0% + 26.5","7"],["L","0% + 12.5","0% + 20"],["L","13","0% + 11"],["L","17","7"]]}]'
+          )}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="w-full flex items-center relative z-10">
+        {/* Brand (Landing style) */}
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-primary/20 border border-primary rounded flex items-center justify-center">
+            <Rocket className="w-5 h-5 text-primary" />
+          </div>
+          <div className="hidden sm:block">
+            <h1 className="text-xl font-bold text-primary uppercase tracking-wider leading-none">
+              Space Conquerors
+            </h1>
+            <p className="text-[10px] text-primary/50 uppercase tracking-widest mt-1">
+              {t("subtitle")}
+            </p>
+          </div>
+        </div>
+
+        <div className="h-8 w-[1px] bg-primary/20 mx-6" />
+
+        {/* HUD Elements */}
+        <div className="flex items-center gap-8">
+          <div className="flex items-center gap-3">
+            <Zap size={14} className="text-primary animate-pulse" />
+            <div className="flex flex-col">
+              <span className="text-[9px] font-mono text-primary/40 leading-none uppercase">{t("reactor")}</span>
+              <span className="text-xs font-bold text-primary leading-none mt-1">100%</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <Activity size={14} className="text-success" />
+            <div className="flex flex-col">
+              <span className="text-[9px] font-mono text-success/40 leading-none uppercase">{t("shields")}</span>
+              <span className="text-xs font-bold text-success leading-none mt-1">{ts("nominal")}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex-1" />
+
+        {/* Navigation / Actions */}
+        <div className="flex items-center gap-3">
+          <div className="hidden lg:flex gap-1 mr-4">
+            {["fleet", "map", "intel"].map((key) => (
+              <Button key={key} variant="secondary" shape="flat" className="text-[10px] uppercase tracking-widest h-9 px-4">
+                {t(`menu.${key}`)}
+              </Button>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3 pl-4 border-l border-primary/20">
+            <div className="text-right hidden sm:block">
+              <div className="text-xs font-bold text-primary uppercase leading-none">Cmdr. Juamp</div>
+              <div className="text-[10px] font-mono text-primary/40 uppercase leading-none mt-1.5 tracking-tighter">
+                {ts("level")} 42 // ALPHA
+              </div>
+            </div>
+            <div className="size-10 border border-primary/30 bg-primary/10 flex items-center justify-center cursor-pointer hover:border-primary transition-colors">
+              <User className="size-5 text-primary" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}

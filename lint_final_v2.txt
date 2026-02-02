@@ -1,0 +1,79 @@
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\app\ui-showcase\page.tsx
+   79:10   warning  'Search' is defined but never used                                      @typescript-eslint/no-unused-vars
+   79:18   warning  'Mail' is defined but never used                                        @typescript-eslint/no-unused-vars
+   79:24   warning  'Lock' is defined but never used                                        @typescript-eslint/no-unused-vars
+   79:54   warning  'Bell' is defined but never used                                        @typescript-eslint/no-unused-vars
+   79:81   warning  'CheckCircle' is defined but never used                                 @typescript-eslint/no-unused-vars
+   79:94   warning  'XCircle' is defined but never used                                     @typescript-eslint/no-unused-vars
+   79:103  warning  'Rocket' is defined but never used                                      @typescript-eslint/no-unused-vars
+   79:111  warning  'Shield' is defined but never used                                      @typescript-eslint/no-unused-vars
+   86:10   warning  'activeTab' is assigned a value but never used                          @typescript-eslint/no-unused-vars
+   86:21   warning  'setActiveTab' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  153:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  169:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  175:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  187:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  203:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  220:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  247:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  270:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  292:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  316:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  323:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  345:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  357:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  382:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  398:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  427:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  451:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Alert.tsx
+  83:3  warning  'className' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\ComboBox.tsx
+   39:3  warning  'children' is defined but never used   @typescript-eslint/no-unused-vars
+   40:3  warning  'className' is defined but never used  @typescript-eslint/no-unused-vars
+  106:3  warning  'children' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Input.tsx
+  7:3  warning  'children' is defined but never used          @typescript-eslint/no-unused-vars
+  8:3  warning  'variant' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\LoginForm.tsx
+  6:10  warning  'Lock' is defined but never used  @typescript-eslint/no-unused-vars
+  6:16  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Navbar.tsx
+  5:10  warning  'Bell' is defined but never used      @typescript-eslint/no-unused-vars
+  5:22  warning  'Settings' is defined but never used  @typescript-eslint/no-unused-vars
+  5:42  warning  'Search' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\TextArea.tsx
+  7:3  warning  'children' is defined but never used          @typescript-eslint/no-unused-vars
+  8:3  warning  'variant' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\App.tsx
+  40:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\App.tsx:40:7
+  38 |     if (!systemData) {
+  39 |       const data = generator.generate();
+> 40 |       setSystemData(data);
+     |       ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  41 |     }
+  42 |   }, [generator, systemData]);
+  43 |  react-hooks/set-state-in-effect
+  72:14  warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\generators\star-generator.ts
+  82:12  warning  '_point' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 43 problems (18 errors, 25 warnings)
+

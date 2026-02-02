@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: rgb(20, 160, 230);
+  --color-primary-foreground: rgb(255, 255, 255);
+  --color-accent: rgb(202, 65, 34);
+  --color-accent-foreground: rgb(255, 255, 255);
+  --color-secondary: color-mix(in oklab, var(--color-primary), white 50%);
+  --color-secondary-foreground: color-mix(in oklab, var(--color-primary), white 70%);
+  
+  --color-success: color-mix(in oklab, #14b8a6, white 20%);
+  --color-success-foreground: rgb(255, 255, 255);
+  
+  --color-destructive: color-mix(in oklab, #f43f5e, white 20%);
+  --color-destructive-foreground: rgb(255, 255, 255);
+
+  --color-background: color-mix(in oklab, var(--color-primary), black 80%);
+  --color-foreground: white;
+  
+  --shadow-glow: 0 0 10px var(--color-primary);
+  --shadow-glow-accent: 0 0 10px var(--color-accent);
+}
+
+:root {
+  --background: #02040a;
+  --foreground: #e1e7f0;
+  
+  --grid-color: rgba(0, 242, 255, 0.05);
+  --grid-size: 40px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(2, 4, 10, 0.8) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 8px var(--color-primary), 0 0 15px var(--color-primary);
+}
+
+.text-shadow-glow-accent {
+  text-shadow: 0 0 8px var(--color-accent), 0 0 15px var(--color-accent);
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 242, 255, 0.05) 50%,
+    transparent 100%
+  );
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 50;
+  animation: scanline 8s linear infinite;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .clip-path-tech {
+    clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
+  }
+
+  /* Touch-friendly utilities */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent text selection on mobile */
+  .no-select {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Smooth scrolling */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  body {
+    background-size: 20px 20px;
+  }
+
+  .scanline {
+    opacity: 0.05;
+  }
+}

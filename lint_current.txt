@@ -1,0 +1,132 @@
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\app\ui-showcase\page.tsx
+    4:17  warning  'useState' is defined but never used                                    @typescript-eslint/no-unused-vars
+   15:3   warning  'RadioGroupLabel' is defined but never used                             @typescript-eslint/no-unused-vars
+   91:3   warning  'Search' is defined but never used                                      @typescript-eslint/no-unused-vars
+   92:3   warning  'Terminal' is defined but never used                                    @typescript-eslint/no-unused-vars
+   92:23  warning  'Zap' is defined but never used                                         @typescript-eslint/no-unused-vars
+   92:28  warning  'Shield' is defined but never used                                      @typescript-eslint/no-unused-vars
+   92:36  warning  'Rocket' is defined but never used                                      @typescript-eslint/no-unused-vars
+  195:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  202:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  227:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  238:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  262:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  270:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  281:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  297:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  313:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  336:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  352:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  362:96  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  387:96  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  403:96  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  432:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  463:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  488:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  529:94  error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  539:38  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:40  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:42  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:45  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:47  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:49  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:53  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:55  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:57  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:67  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:69  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:71  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:75  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:77  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:79  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:84  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:86  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+  539:89  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`         react/no-unescaped-entities
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Alert.tsx
+  83:3  warning  'className' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Chart.tsx
+  26:18  error    The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  34:6   warning  React Hook useEffect has a missing dependency: 'config'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                  react-hooks/exhaustive-deps
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\ComboBox.tsx
+   39:3  warning  'children' is defined but never used   @typescript-eslint/no-unused-vars
+   40:3  warning  'className' is defined but never used  @typescript-eslint/no-unused-vars
+  106:3  warning  'children' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Input.tsx
+  7:3  warning  'children' is defined but never used          @typescript-eslint/no-unused-vars
+  8:3  warning  'variant' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\LoginForm.tsx
+  6:10  warning  'Lock' is defined but never used  @typescript-eslint/no-unused-vars
+  6:16  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Navbar.tsx
+  5:10  warning  'Bell' is defined but never used      @typescript-eslint/no-unused-vars
+  5:22  warning  'Settings' is defined but never used  @typescript-eslint/no-unused-vars
+  5:42  warning  'Search' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\ResourceHUD.tsx
+  8:9  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\TextArea.tsx
+  7:3  warning  'children' is defined but never used          @typescript-eslint/no-unused-vars
+  8:3  warning  'variant' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\App.tsx
+  33:7   error    Error: Calling setState from useMemo may trigger an infinite loop
+
+Each time the memo callback is evaluated it will change state. This can cause a memoization dependency to change, running the memo function again and causing an infinite loop. Instead of setting state in useMemo(), prefer deriving the value during render. (https://react.dev/reference/react/useState).
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\App.tsx:33:7
+  31 |     if (!systemData) {
+  32 |       const data = generator.generate();
+> 33 |       setSystemData(data);
+     |       ^^^^^^^^^^^^^ Found setState() within useMemo()
+  34 |     }
+  35 |   }, [generator, systemData]);
+  36 |  react-hooks/set-state-in-render
+  65:14  warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\components\Planet.tsx
+   49:5   error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\components\Planet.tsx:49:5
+  47 |   const { geometry, material } = useMemo(() => {
+  48 |     const gen = PlanetFactory.create(effectiveType, effectiveSeed, effectiveRadius, resolution);
+> 49 |     generatorRef.current = gen;
+     |     ^^^^^^^^^^^^^^^^^^^^ Cannot update ref during render
+  50 |     
+  51 |     const geo = gen.generateGeometryWithLOD(initialDistance);
+  52 |     const mat = gen.createMaterial();  react-hooks/refs
+  130:31  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  131:30  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  132:29  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  133:28  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  134:31  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\components\SolarSystem.tsx
+  122:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  123:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  124:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  125:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  126:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  285:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  286:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  287:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  288:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  289:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\generators\star-generator.ts
+  82:12  warning  '_point' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 78 problems (55 errors, 23 warnings)
+

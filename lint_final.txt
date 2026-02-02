@@ -1,0 +1,108 @@
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\app\page.tsx
+  14:10  warning  'activeFeature' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  14:25  warning  'setActiveFeature' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\app\ui-showcase\page.tsx
+   79:10   warning  'Search' is defined but never used                                      @typescript-eslint/no-unused-vars
+   79:18   warning  'Mail' is defined but never used                                        @typescript-eslint/no-unused-vars
+   79:24   warning  'Lock' is defined but never used                                        @typescript-eslint/no-unused-vars
+   79:54   warning  'Bell' is defined but never used                                        @typescript-eslint/no-unused-vars
+   79:81   warning  'CheckCircle' is defined but never used                                 @typescript-eslint/no-unused-vars
+   79:94   warning  'XCircle' is defined but never used                                     @typescript-eslint/no-unused-vars
+   79:103  warning  'Rocket' is defined but never used                                      @typescript-eslint/no-unused-vars
+   79:111  warning  'Shield' is defined but never used                                      @typescript-eslint/no-unused-vars
+   86:10   warning  'activeTab' is assigned a value but never used                          @typescript-eslint/no-unused-vars
+   86:21   warning  'setActiveTab' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  142:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  153:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  169:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  175:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  187:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  203:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  220:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  247:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  270:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  292:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  316:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  323:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  345:93   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  357:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  382:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  398:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  427:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  451:67   error    Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Alert.tsx
+  83:3  warning  'className' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Chart.tsx
+  27:18  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\ComboBox.tsx
+   39:3  warning  'children' is defined but never used   @typescript-eslint/no-unused-vars
+   40:3  warning  'className' is defined but never used  @typescript-eslint/no-unused-vars
+  106:3  warning  'children' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Input.tsx
+  7:3  warning  'children' is defined but never used          @typescript-eslint/no-unused-vars
+  8:3  warning  'variant' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\LoginForm.tsx
+  6:10  warning  'Lock' is defined but never used  @typescript-eslint/no-unused-vars
+  6:16  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\Navbar.tsx
+  5:10  warning  'Bell' is defined but never used      @typescript-eslint/no-unused-vars
+  5:22  warning  'Settings' is defined but never used  @typescript-eslint/no-unused-vars
+  5:42  warning  'Search' is defined but never used    @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\ResourceHUD.tsx
+  8:9  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\components\ui\TextArea.tsx
+  7:3  warning  'children' is defined but never used          @typescript-eslint/no-unused-vars
+  8:3  warning  'variant' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\App.tsx
+  33:7   error    Error: Calling setState from useMemo may trigger an infinite loop
+
+Each time the memo callback is evaluated it will change state. This can cause a memoization dependency to change, running the memo function again and causing an infinite loop. Instead of setting state in useMemo(), prefer deriving the value during render. (https://react.dev/reference/react/useState).
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\App.tsx:33:7
+  31 |     if (!systemData) {
+  32 |       const data = generator.generate();
+> 33 |       setSystemData(data);
+     |       ^^^^^^^^^^^^^ Found setState() within useMemo()
+  34 |     }
+  35 |   }, [generator, systemData]);
+  36 |  react-hooks/set-state-in-render
+  65:14  warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\components\Planet.tsx
+  127:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  128:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  129:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  130:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  131:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\components\SolarSystem.tsx
+  122:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  123:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  124:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  125:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  126:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  285:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  286:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  287:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  288:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  289:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Juamp\OneDrive\Documents\space-conquerors\frontend\planet-engine\generators\star-generator.ts
+  82:12  warning  '_point' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 63 problems (36 errors, 27 warnings)
+

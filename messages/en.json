@@ -1,0 +1,184 @@
+{
+    "nav": {
+        "features": "Features",
+        "gameplay": "Gameplay",
+        "universe": "Universe",
+        "login": "Login",
+        "dashboard": "Access Panel",
+        "startPlaying": "Start Playing"
+    },
+    "hero": {
+        "badge": "Open Beta Now Live",
+        "title": "CONQUER THE GALAXY",
+        "description": "Build your empire across the stars. Command fleets, colonize planets, and dominate the universe in this next-generation space strategy game.",
+        "playNow": "Play Now",
+        "goToDashboard": "Go to Dashboard",
+        "learnMore": "Learn More",
+        "stats": {
+            "players": "Active Players",
+            "planets": "Colonized Planets",
+            "battles": "Daily Battles"
+        }
+    },
+    "features": {
+        "title": "CORE FEATURES",
+        "subtitle": "Everything you need to build a galactic empire",
+        "colonization": {
+            "title": "Planetary Colonization",
+            "description": "Establish colonies across hundreds of unique planets. Manage resources, build infrastructure, and expand your territory."
+        },
+        "fleet": {
+            "title": "Fleet Command",
+            "description": "Design and command powerful fleets. Engage in tactical battles and defend your empire from threats."
+        },
+        "research": {
+            "title": "Research & Technology",
+            "description": "Unlock advanced technologies. Upgrade your civilization and gain strategic advantages."
+        }
+    },
+    "footer": {
+        "copyright": "SPACE CONQUERORS © 2026",
+        "terms": "Terms",
+        "privacy": "Privacy",
+        "contact": "Contact"
+    },
+    "auth": {
+        "login": {
+            "title": "Sign In",
+            "subtitle": "",
+            "commanderId": "Username",
+            "commanderIdPlaceholder": "Enter your username...",
+            "password": "Password",
+            "passwordPlaceholder": "••••••••••••",
+            "forgotPassword": "Forgot your password?",
+            "submit": "Sign In",
+            "securedLine": "",
+            "noAccount": "Don't have an account?",
+            "createAccount": "Create New Account"
+        },
+        "register": {
+            "title": "Create Account",
+            "subtitle": "",
+            "name": "Name",
+            "namePlaceholder": "Enter your name...",
+            "email": "Email",
+            "emailPlaceholder": "your@email.com",
+            "commanderId": "Username",
+            "commanderIdPlaceholder": "Choose your username...",
+            "password": "Password",
+            "passwordPlaceholder": "••••••••••••",
+            "confirmPassword": "Confirm Password",
+            "confirmPasswordPlaceholder": "••••••••••••",
+            "submit": "Create Account",
+            "securedLine": "",
+            "hasAccount": "Already have an account?",
+            "login": "Sign In"
+        },
+        "back": "Back"
+    },
+    "dashboard": {
+        "sidebar": {
+            "title": "Planets"
+        },
+        "tabs": {
+            "planetView": "Planet View",
+            "solarSystem": "Solar System"
+        },
+        "categories": {
+            "fleet": "Fleet",
+            "techs": "Techs",
+            "defenses": "Defenses"
+        },
+        "buildQueue": {
+            "title": "Build Queue",
+            "status": "NOMINAL"
+        },
+        "solarView": {
+            "targetIdentity": "Target Identity",
+            "classification": "Classification",
+            "orbitRadius": "Orbit Radius",
+            "orbitalTelemetry": "Orbital Telemetry",
+            "eccentricity": "Eccentricity",
+            "inclination": "Inclination",
+            "period": "Period",
+            "backButton": "Back to System",
+            "liveFeed": "System Live Feed",
+            "overlayTitle": "Deep Space Tactical Overlay"
+        },
+        "planetTypes": {
+            "volcanic": "Volcanic",
+            "icy": "Icy",
+            "jungle": "Jungle",
+            "gas_giant": "Gas Giant",
+            "desert": "Desert",
+            "oceanic": "Oceanic",
+            "rocky": "Rocky"
+        },
+        "upgrades": {
+            "level": "Level",
+            "fleet": {
+                "cazaLigero": "Light Fighter",
+                "cruceroPesado": "Heavy Cruiser",
+                "naveCarga": "Cargo Ship",
+                "sondaEspionaje": "Espionage Probe",
+                "reciclador": "Recycler",
+                "destructor": "Destroyer",
+                "sateliteSolar": "Solar Satellite",
+                "naveBatalla": "Battle Ship"
+            },
+            "techs": {
+                "techEnergia": "Energy Technology",
+                "techLaser": "Laser Technology",
+                "techMotores": "Drive Technology",
+                "techIones": "Ion Technology",
+                "techHiperespacio": "Hyperspace Technology",
+                "techPlasma": "Plasma Technology",
+                "researchNetwork": "Intergalactic Research Network",
+                "astrophysics": "Astrophysics"
+            },
+            "defenses": {
+                "missileLauncher": "Rocket Launcher",
+                "smallLaser": "Small Laser",
+                "largeLaser": "Large Laser",
+                "gaussCannon": "Gauss Cannon",
+                "ionCannon": "Ion Cannon",
+                "plasmaCannon": "Plasma Turret",
+                "smallShield": "Small Shield Dome",
+                "largeShield": "Large Shield Dome"
+            }
+        },
+        "mainSidebar": {
+            "galacticMap": "Galactic Map",
+            "fleetCommand": "Fleet Command",
+            "defenseOps": "Defense Ops",
+            "techLabs": "Tech Labs",
+            "diplomacy": "Diplomacy",
+            "systemConfig": "System Config",
+            "powerGrid": "Power Grid",
+            "stable": "STABLE",
+            "details": {
+                "sectors": "12 Sectors",
+                "vessels": "48 Vessels",
+                "shields": "Shields: 100%",
+                "discovery": "Discovery pending",
+                "requests": "3 Requests",
+                "version": "Kernal 2.0"
+            }
+        },
+        "navbar": {
+            "subtitle": "Galactic Domination",
+            "reactor": "Reactor",
+            "shields": "Shields",
+            "menu": {
+                "fleet": "Fleet",
+                "map": "Map",
+                "intel": "Intel"
+            }
+        },
+        "status": {
+            "nominal": "NOMINAL",
+            "level": "LEVEL",
+            "stable": "STABLE"
+        }
+    }
+}

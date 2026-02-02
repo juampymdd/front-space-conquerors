@@ -1,0 +1,184 @@
+{
+    "nav": {
+        "features": "Características",
+        "gameplay": "Jugabilidad",
+        "universe": "Universo",
+        "login": "Login",
+        "dashboard": "Acceder al Panel",
+        "startPlaying": "Empezar a Jugar"
+    },
+    "hero": {
+        "badge": "Beta Abierta Disponible",
+        "title": "CONQUISTA LA GALAXIA",
+        "description": "Construye tu imperio entre las estrellas. Comanda flotas, coloniza planetas y domina el universo en este juego de estrategia espacial de nueva generación.",
+        "playNow": "Jugar Ahora",
+        "goToDashboard": "Ir al Panel Control",
+        "learnMore": "Saber Más",
+        "stats": {
+            "players": "Jugadores Activos",
+            "planets": "Planetas Colonizados",
+            "battles": "Batallas Diarias"
+        }
+    },
+    "features": {
+        "title": "CARACTERÍSTICAS PRINCIPALES",
+        "subtitle": "Todo lo que necesitas para construir un imperio galáctico",
+        "colonization": {
+            "title": "Colonización Planetaria",
+            "description": "Establece colonias en cientos de planetas únicos. Gestiona recursos, construye infraestructura y expande tu territorio."
+        },
+        "fleet": {
+            "title": "Comando de Flotas",
+            "description": "Diseña y comanda flotas poderosas. Participa en batallas tácticas y defiende tu imperio de amenazas."
+        },
+        "research": {
+            "title": "Investigación y Tecnología",
+            "description": "Desbloquea tecnologías avanzadas. Mejora tu civilización y obtén ventajas estratégicas."
+        }
+    },
+    "footer": {
+        "copyright": "SPACE CONQUERORS © 2026",
+        "terms": "Términos",
+        "privacy": "Privacidad",
+        "contact": "Contacto"
+    },
+    "auth": {
+        "login": {
+            "title": "Iniciar Sesión",
+            "subtitle": "",
+            "commanderId": "Usuario",
+            "commanderIdPlaceholder": "Ingresa tu usuario...",
+            "password": "Contraseña",
+            "passwordPlaceholder": "••••••••••••",
+            "forgotPassword": "¿Olvidaste tu contraseña?",
+            "submit": "Iniciar Sesión",
+            "securedLine": "",
+            "noAccount": "¿No tienes cuenta?",
+            "createAccount": "Crear Nueva Cuenta"
+        },
+        "register": {
+            "title": "Crear Cuenta",
+            "subtitle": "",
+            "name": "Nombre",
+            "namePlaceholder": "Ingresa tu nombre...",
+            "email": "Email",
+            "emailPlaceholder": "tu@email.com",
+            "commanderId": "Usuario",
+            "commanderIdPlaceholder": "Elige tu usuario...",
+            "password": "Contraseña",
+            "passwordPlaceholder": "••••••••••••",
+            "confirmPassword": "Confirmar Contraseña",
+            "confirmPasswordPlaceholder": "••••••••••••",
+            "submit": "Crear Cuenta",
+            "securedLine": "",
+            "hasAccount": "¿Ya tienes cuenta?",
+            "login": "Iniciar Sesión"
+        },
+        "back": "Volver"
+    },
+    "dashboard": {
+        "sidebar": {
+            "title": "Planetas"
+        },
+        "tabs": {
+            "planetView": "Vista Planetaria",
+            "solarSystem": "Sistema Solar"
+        },
+        "categories": {
+            "fleet": "Flota",
+            "techs": "Techs",
+            "defenses": "Defensas"
+        },
+        "buildQueue": {
+            "title": "Cola de Construcción",
+            "status": "NOMINAL"
+        },
+        "solarView": {
+            "targetIdentity": "Identidad del Objetivo",
+            "classification": "Clasificación",
+            "orbitRadius": "Radio de Órbita",
+            "orbitalTelemetry": "Telemetría Orbital",
+            "eccentricity": "Excentricidad",
+            "inclination": "Inclinación",
+            "period": "Periodo",
+            "backButton": "Volver al Sistema",
+            "liveFeed": "Transmisión en Vivo",
+            "overlayTitle": "Superposición Táctica de Espacio Profundo"
+        },
+        "planetTypes": {
+            "volcanic": "Volcánico",
+            "icy": "Helado",
+            "jungle": "Jungla",
+            "gas_giant": "Gigante Gaseoso",
+            "desert": "Desierto",
+            "oceanic": "Oceánico",
+            "rocky": "Rocoso"
+        },
+        "upgrades": {
+            "level": "Nivel",
+            "fleet": {
+                "cazaLigero": "Caza Ligero",
+                "cruceroPesado": "Crucero Pesado",
+                "naveCarga": "Nave de Carga",
+                "sondaEspionaje": "Sonda de Espionaje",
+                "reciclador": "Reciclador",
+                "destructor": "Destructor",
+                "sateliteSolar": "Satélite Solar",
+                "naveBatalla": "Nave de Batalla"
+            },
+            "techs": {
+                "techEnergia": "Tecnología de Energía",
+                "techLaser": "Tecnología Láser",
+                "techMotores": "Tecnología de Motores",
+                "techIones": "Tecnología de Iones",
+                "techHiperespacio": "Tecnología de Hiperespacio",
+                "techPlasma": "Tecnología de Plasma",
+                "researchNetwork": "Red de Investigación",
+                "astrophysics": "Astrofísica"
+            },
+            "defenses": {
+                "missileLauncher": "Lanzamisiles",
+                "smallLaser": "Láser Pequeño",
+                "largeLaser": "Láser Grande",
+                "gaussCannon": "Cañón de Gauss",
+                "ionCannon": "Cañón de Iones",
+                "plasmaCannon": "Cañón de Plasma",
+                "smallShield": "Cúpula Pequeña",
+                "largeShield": "Cúpula Grande"
+            }
+        },
+        "mainSidebar": {
+            "galacticMap": "Mapa Galáctico",
+            "fleetCommand": "Mando de Flota",
+            "defenseOps": "Op. de Defensa",
+            "techLabs": "Laboratorios",
+            "diplomacy": "Diplomacia",
+            "systemConfig": "Configuración",
+            "powerGrid": "Red Energética",
+            "stable": "ESTABLE",
+            "details": {
+                "sectors": "12 Sectores",
+                "vessels": "48 Naves",
+                "shields": "Escudos: 100%",
+                "discovery": "Pendiente",
+                "requests": "3 Solicitudes",
+                "version": "Kernal 2.0"
+            }
+        },
+        "navbar": {
+            "subtitle": "Dominación Galáctica",
+            "reactor": "Reactor",
+            "shields": "Escudos",
+            "menu": {
+                "fleet": "Flota",
+                "map": "Mapa",
+                "intel": "Inteligencia"
+            }
+        },
+        "status": {
+            "nominal": "NOMINAL",
+            "level": "NIVEL",
+            "stable": "ESTABLE"
+        }
+    }
+}
