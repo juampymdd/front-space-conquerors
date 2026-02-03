@@ -1,0 +1,323 @@
+{
+    "nav": {
+        "features": "特徴",
+        "gameplay": "ゲームプレイ",
+        "universe": "宇宙",
+        "login": "ログイン",
+        "dashboard": "ダッシュボードへ",
+        "startPlaying": "プレイ開始"
+    },
+    "hero": {
+        "badge": "オープンベータ実施中",
+        "title": "銀河を征服せよ",
+        "description": "星々の間に帝国を築きましょう。この次世代宇宙戦略ゲームで、艦隊を指揮し、惑星に入植し、宇宙を支配してください。",
+        "playNow": "今すぐプレイ",
+        "goToDashboard": "ダッシュボードへ",
+        "learnMore": "詳細を見る",
+        "stats": {
+            "players": "アクティブプレイヤー",
+            "planets": "入植済み惑星",
+            "battles": "一日の戦闘数"
+        }
+    },
+    "features": {
+        "title": "主な特徴",
+        "subtitle": "銀河帝国を築くために必要なすべて",
+        "colonization": {
+            "title": "惑星入植",
+            "description": "数百のユニークな惑星にコロニーを設立します。資源を管理し、インフラを構築し、領土を拡大しましょう。"
+        },
+        "fleet": {
+            "title": "艦隊指揮",
+            "description": "強力な艦隊を設計し、指揮します。戦術的な戦闘に参加し、脅威から帝国を守りましょう。"
+        },
+        "research": {
+            "title": "研究と技術",
+            "description": "高度な技術を解放します。文明をアップグレードし、戦略的優位性を獲得しましょう。"
+        }
+    },
+    "footer": {
+        "copyright": "SPACE CONQUERORS © 2026",
+        "terms": "利用規約",
+        "privacy": "プライバシー",
+        "contact": "お問い合わせ"
+    },
+    "auth": {
+        "login": {
+            "title": "ログイン",
+            "subtitle": "",
+            "commanderId": "ユーザー名",
+            "commanderIdPlaceholder": "ユーザー名を入力...",
+            "password": "パスワード",
+            "passwordPlaceholder": "••••••••••••",
+            "forgotPassword": "パスワードをお忘れですか？",
+            "submit": "ログイン",
+            "securedLine": "",
+            "noAccount": "アカウントをお持ちでないですか？",
+            "createAccount": "アカウント作成"
+        },
+        "register": {
+            "title": "アカウント作成",
+            "subtitle": "",
+            "name": "名前",
+            "namePlaceholder": "名前を入力...",
+            "email": "メールアドレス",
+            "emailPlaceholder": "your@email.com",
+            "commanderId": "ユーザー名",
+            "commanderIdPlaceholder": "ユーザー名を選択...",
+            "password": "パスワード",
+            "passwordPlaceholder": "••••••••••••",
+            "confirmPassword": "パスワード確認",
+            "confirmPasswordPlaceholder": "••••••••••••",
+            "submit": "アカウント作成",
+            "securedLine": "",
+            "hasAccount": "すでにアカウントをお持ちですか？",
+            "login": "ログイン"
+        },
+        "back": "戻る"
+    },
+    "dashboard": {
+        "sidebar": {
+            "title": "惑星"
+        },
+        "tabs": {
+            "planetView": "惑星ビュー",
+            "vuelos": "フライト",
+            "solarSystem": "太陽系",
+            "notifications": "通信"
+        },
+        "categories": {
+            "fleet": "艦隊",
+            "techs": "技術",
+            "defenses": "防衛",
+            "movements": "移動"
+        },
+        "buildQueue": {
+            "title": "建設キュー",
+            "status": "正常"
+        },
+        "solarView": {
+            "targetIdentity": "ターゲット識別",
+            "classification": "分類",
+            "orbitRadius": "軌道半径",
+            "orbitalTelemetry": "軌道テレメトリ",
+            "eccentricity": "離心率",
+            "inclination": "軌道配向",
+            "period": "周期",
+            "backButton": "星系に戻る",
+            "liveFeed": "システムライブフィード",
+            "overlayTitle": "深宇宙戦術オーバーレイ"
+        },
+        "movements": {
+            "title": "フライトセンター",
+            "activeMissions": "進行中のミッション",
+            "noMovements": "艦隊の移動は検知されませんでした",
+            "origin": "出発地",
+            "destination": "目的地",
+            "fleetUnitCount": "構成",
+            "types": {
+                "attack": "攻撃",
+                "defend": "防衛",
+                "transport": "輸送",
+                "expedition": "遠征",
+                "espionage": "スパイ",
+                "colonize": "入植"
+            }
+        },
+        "planetTypes": {
+            "volcanic": "火山",
+            "icy": "氷",
+            "jungle": "ジャングル",
+            "gas_giant": "巨大ガス惑星",
+            "desert": "砂漠",
+            "oceanic": "海洋",
+            "rocky": "岩石"
+        },
+        "upgrades": {
+            "level": "レベル",
+            "fleet": {
+                "cazaLigero": {
+                    "name": "軽戦闘機",
+                    "description": "軽量で高速な攻撃機。低い生産コストにより、大群を展開して敵の防衛を圧倒することができます。"
+                },
+                "cruceroPesado": {
+                    "name": "重巡洋艦",
+                    "description": "軽戦闘機のほぼ3倍の装甲と優れた火力を持ち、あらゆる戦闘艦隊の主力となります。"
+                },
+                "naveCarga": {
+                    "name": "貨物船",
+                    "description": "星系間の大量資源輸送のために特別に設計されています。遅くて脆弱ですが、その積載能力は比類ありません。"
+                },
+                "sondaEspionaje": {
+                    "name": "スパイプローブ",
+                    "description": "高度なセンサーを搭載した小型無人船。敵の惑星に関する重要な情報を入手できます。"
+                },
+                "reciclador": {
+                    "name": "リサイクル船",
+                    "description": "戦闘後の軌道上の破片回収に特化した船。失われた鉱物やクリスタルを回収するために不可欠です。"
+                },
+                "destructor": {
+                    "name": "駆逐艦",
+                    "description": "真の飛行要塞。その唯一の目的は、敵艦隊と重惑星防衛施設の完全な殲滅です。"
+                },
+                "sateliteSolar": {
+                    "name": "ソーラーサテライト",
+                    "description": "シンプルだが効果的な軌道エネルギープラットフォーム。恒星の放射を利用して惑星に安定したエネルギーを供給します。"
+                },
+                "naveBatalla": {
+                    "name": "戦艦",
+                    "description": "帝国海軍の誇り。メガレーザーとイオンシールドを装備し、極端な攻撃に耐えることができます。"
+                },
+                "colonizador": {
+                    "name": "コロニー船",
+                    "description": "無人の惑星に新しいコロニーを設立するために必要なすべてを備えた巨大な船。"
+                }
+            },
+            "techs": {
+                "techEnergia": {
+                    "name": "エネルギー技術",
+                    "description": "すべてのエネルギーシステムの効率を向上させます。新しい高度な技術を開発するための基本的な要件です。"
+                },
+                "techLaser": {
+                    "name": "レーザー技術",
+                    "description": "武器やシールドのための集光システムの開発。軽装艦船と防衛施設の火力を増加させます。"
+                },
+                "techMotores": {
+                    "name": "エンジン技術",
+                    "description": "化学推進およびインパルスシステムの研究。すべての艦船の速度を大幅に向上させます。"
+                },
+                "techIones": {
+                    "name": "イオン技術",
+                    "description": "荷電粒子を使用して破壊的な武器やより強固なシールドを作成します。中型艦船の基本です。"
+                },
+                "techHiperespacio": {
+                    "name": "ハイパースペース技術",
+                    "description": "艦船が折り畳まれた次元を通じてジャンプすることを可能にし、恒星間移動時間を劇的に短縮します。"
+                },
+                "techPlasma": {
+                    "name": "プラズマ技術",
+                    "description": "熱兵器の最終進化形。計り知れない破壊力を持つイオン化物質の球体を生成します。"
+                },
+                "researchNetwork": {
+                    "name": "銀河研究ネットワーク",
+                    "description": "異なる惑星の研究所を接続してデータを共有し、全研究時間を劇的に短縮します。"
+                },
+                "astrophysics": {
+                    "name": "宇宙物理学",
+                    "description": "宇宙の高度な研究。新しい惑星への入植を可能にし、艦隊の遠征能力を向上させます。"
+                }
+            },
+            "defenses": {
+                "missileLauncher": {
+                    "name": "ロケットランチャー",
+                    "description": "運動エネルギー弾を発射する基本的で安価な防衛施設。大量の小型艦船に対して効果的です。"
+                },
+                "smallLaser": {
+                    "name": "スモールレーザー",
+                    "description": "集光を利用した信頼性の高い防衛システム。軽戦闘機に対して優れた命中率を誇ります。"
+                },
+                "largeLaser": {
+                    "name": "ラージレーザー",
+                    "description": "より強力なコンデンサを備えたスモールレーザーの改良版。重巡洋艦の装甲を貫通することができます。"
+                },
+                "gaussCannon": {
+                    "name": "ガウスキャノン",
+                    "description": "金属弾を超音速で発射する電磁加速器。敵のシールドの大部分を無視します。"
+                },
+                "ionCannon": {
+                    "name": "イオンキャノン",
+                    "description": "イオンバーストを発射して攻撃船の電子システムを過負荷にし、一時的に無力化します。"
+                },
+                "plasmaCannon": {
+                    "name": "プラズマタレット",
+                    "description": "最も致命的な惑星防衛施設。一撃でほぼすべての艦船を蒸発させることができるプラズマ球を発射します。"
+                },
+                "smallShield": {
+                    "name": "小型シールドドーム",
+                    "description": "惑星を包む戦術フィールドジェネレーター。小規模な爆撃に対する追加の保護層を提供します。"
+                },
+                "largeShield": {
+                    "name": "大型シールドドーム",
+                    "description": "巨大なエネルギーシールド。莫大なエネルギーを必要としますが、重戦艦の打撃に耐えることができます。"
+                }
+            }
+        },
+        "mainSidebar": {
+            "galacticMap": "銀河マップ",
+            "fleetCommand": "艦隊司令部",
+            "defenseOps": "防衛作戦",
+            "techLabs": "技術研究所",
+            "diplomacy": "外交",
+            "systemConfig": "システム設定",
+            "powerGrid": "電力網",
+            "stable": "安定",
+            "details": {
+                "sectors": "12 セクター",
+                "vessels": "48 隻",
+                "shields": "シールド: 100%",
+                "discovery": "探索待ち",
+                "requests": "3 リクエスト",
+                "version": "カーネル 2.0"
+            }
+        },
+        "resources": {
+            "metal": "メタル",
+            "crystal": "クリスタル",
+            "deuterium": "重水素",
+            "energy": "エネルギー"
+        },
+         "navbar": {
+            "subtitle": "銀河支配",
+            "reactor": "リアクター",
+            "shields": "シールド",
+            "menu": {
+                "fleet": "艦隊",
+                "map": "マップ",
+                "intel": "インテル"
+            },
+            "userMenu": {
+                "profile": "司令官プロファイル",
+                "settings": "システム設定",
+                "logout": "リンク終了"
+            }
+        },
+        "status": {
+            "nominal": "正常",
+            "level": "レベル",
+            "stable": "安定"
+        },
+        "notifications": {
+             "n1": {
+                "sender": "防衛システム",
+                "subject": "侵入を検知",
+                "message": "長距離センサーがシグマ9セクターに侵入する敵対的な艦隊を検知しました。警戒レベルの引き上げを推奨します。自動防衛プロトコルが開始されました。全艦船は直ちに戦闘配置についてください。"
+            },
+            "n2": {
+                "sender": "大使 カエル・サス",
+                "subject": "貿易条約の提案",
+                "message": "銀河連邦は重水素の自由貿易を提案しています。即時の会談を要請します。X-99小惑星帯にある我々の精製所には、貴殿のコロニーに有益な余剰資源があります。"
+            },
+            "n3": {
+                "sender": "工学部",
+                "subject": "研究完了：インパルスエンジン V",
+                "message": "亜光速スラスターのアップグレードがインストールされました。艦隊速度が15％向上しました。これで外惑星まで半分の時間で到達できます。"
+            },
+            "n4": {
+                "sender": "物流部",
+                "subject": "物資到着",
+                "message": "貨物船団N-442が採掘コロニーに到着しました。メタル50,000単位の荷降ろしが進行中です。2標準時間以内に完了予定です。"
+            },
+            "n5": {
+                "sender": "惑星センサー",
+                "subject": "地震活動",
+                "message": "火山地帯で軽微な揺れが検知されました。エネルギー生産が変動する可能性があります。核融合炉の基礎補強を推奨します。"
+            },
+            "n6": {
+                "sender": "最高司令部",
+                "subject": "ようこそ、司令官",
+                "message": "国境セクターへの配属が確認されました。あなたの統治に大いに期待しています。艦隊はあなたの自由になります。"
+            },
+            "markAsRead": "既読にする"
+        }
+    }
+}

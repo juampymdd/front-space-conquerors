@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ScrollArea } from "@/components/ui/ScrollArea";
-import { Mail, AlertTriangle, CheckCircle, Info, Radio } from "lucide-react";
+import { AlertTriangle, CheckCircle, Info, Radio } from "lucide-react";
 import { 
   DialogRoot, 
   DialogBackdrop, 
@@ -11,6 +11,8 @@ import {
   DialogCloseTrigger,
   Portal 
 } from "@/components/ui/Dialog";
+import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/Button";
 
 interface Notification {
   id: string;
@@ -21,63 +23,6 @@ interface Notification {
   date: string;
   read: boolean;
 }
-
-const MOCK_NOTIFICATIONS: Notification[] = [
-  {
-    id: "n1",
-    type: "alert",
-    sender: "Sistema de Defensa",
-    subject: "INCURSIÓN DETECTADA",
-    message: "Sensores de largo alcance han detectado una flota hostil entrando en el sector Sigma-9. Se recomienda elevar nivel de alerta. Protocolo de defensa automático iniciado. Todas las naves deben reportarse a sus estaciones de combate inmediatamente.",
-    date: "Hace 2m",
-    read: false,
-  },
-  {
-    id: "n2",
-    type: "comm",
-    sender: "Embajador Kael'Thas",
-    subject: "Propuesta de Tratado Comercial",
-    message: "La Federación Galáctica extiende una oferta de libre comercio de Deuterio. Solicitamos audiencia inmediata. Nuestras refinerías en el cinturón de asteroides X-99 tienen excedentes que podrían beneficiar a su colonia.",
-    date: "Hace 15m",
-    read: false,
-  },
-  {
-    id: "n3",
-    type: "success",
-    sender: "Ingeniería",
-    subject: "Investigación Completada: Motores de Impulso V",
-    message: "Las mejoras en los propulsores sub-lumínicos han sido instaladas. La velocidad de la flota ha aumentado un 15%. Ahora podemos alcanzar los planetas exteriores en la mitad de tiempo.",
-    date: "Hace 1h",
-    read: true,
-  },
-  {
-    id: "n4",
-    type: "info",
-    sender: "Logística",
-    subject: "Llegada de Suministros",
-    message: "El convoy de carga N-442 ha arribado a la colonia minera. Descarga de 50,000 unidades de Metal en proceso. Se espera finalizar en 2 horas estándar.",
-    date: "Hace 3h",
-    read: true,
-  },
-  {
-    id: "n5",
-    type: "warning",
-    sender: "Sensores Planetarios",
-    subject: "Actividad Sísmica",
-    message: "Temblores menores detectados en el sector volcánico. La producción de energía podría fluctuar. Se recomienda reforzar los cimientos de los reactores de fusión.",
-    date: "Hace 5h",
-    read: true,
-  },
-  {
-      id: "n6",
-      type: "info",
-      sender: "Alto Mando",
-      subject: "Bienvenida, Comandante",
-      message: "Su asignación al sector fronterizo ha sido confirmada. Esperamos grandes cosas de su administración. La flota está a su disposición.",
-      date: "Hace 1d",
-      read: true,
-    },
-];
 
 const TypeIcon = {
   info: Info,
@@ -96,7 +41,67 @@ const TypeColor = {
 };
 
 export function NotificationsView() {
-  const [selectedNotification, setSelectedNotification] = useState<Notification | null>(null);
+  const t = useTranslations("dashboard.notifications");
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+
+  const notifications: Notification[] = [
+    {
+      id: "n1",
+      type: "alert",
+      sender: t("n1.sender"),
+      subject: t("n1.subject"),
+      message: t("n1.message"),
+      date: "2m",
+      read: false,
+    },
+    {
+      id: "n2",
+      type: "comm",
+      sender: t("n2.sender"),
+      subject: t("n2.subject"),
+      message: t("n2.message"),
+      date: "15m",
+      read: false,
+    },
+    {
+      id: "n3",
+      type: "success",
+      sender: t("n3.sender"),
+      subject: t("n3.subject"),
+      message: t("n3.message"),
+      date: "1h",
+      read: true,
+    },
+    {
+      id: "n4",
+      type: "info",
+      sender: t("n4.sender"),
+      subject: t("n4.subject"),
+      message: t("n4.message"),
+      date: "3h",
+      read: true,
+    },
+    {
+      id: "n5",
+      type: "warning",
+      sender: t("n5.sender"),
+      subject: t("n5.subject"),
+      message: t("n5.message"),
+      date: "5h",
+      read: true,
+    },
+    {
+        id: "n6",
+        type: "info",
+        sender: t("n6.sender"),
+        subject: t("n6.subject"),
+        message: t("n6.message"),
+        date: "1d",
+        read: true,
+      },
+  ];
+
+  const selectedNotification = notifications.find(n => n.id === selectedId) || null;
 
   return (
     <div className="h-full flex flex-col px-8 pt-8 pb-4">
@@ -117,14 +122,14 @@ export function NotificationsView() {
       <div className="flex-1 min-h-0 relative -mr-6 pr-6">
         <ScrollArea className="h-full pr-4 pb-4">
             <div className="flex flex-col gap-3">
-                {MOCK_NOTIFICATIONS.map((notif) => {
+                {notifications.map((notif) => {
                     const Icon = TypeIcon[notif.type];
                     const colorClass = TypeColor[notif.type];
                     
                     return (
                         <div 
                             key={notif.id} 
-                            onClick={() => setSelectedNotification(notif)}
+                            onClick={() => setSelectedId(notif.id)}
                             className={`
                                 group relative p-4 border transition-all duration-300 cursor-pointer
                                 ${notif.read ? 'border-primary/10 bg-primary/[0.02] opacity-70 hover:opacity-100' : 'border-primary/30 bg-primary/5 shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:border-primary/50'}
@@ -169,7 +174,7 @@ export function NotificationsView() {
 
       <DialogRoot 
         open={!!selectedNotification} 
-        onOpenChange={(details) => !details.open && setSelectedNotification(null)}
+        onOpenChange={(details) => !details.open && setSelectedId(null)}
       >
         <Portal>
           <DialogBackdrop />
@@ -203,12 +208,13 @@ export function NotificationsView() {
                   </ScrollArea>
 
                   <div className="flex justify-end pt-4 border-t border-primary/10">
-                      <button 
-                        onClick={() => setSelectedNotification(null)}
-                        className="px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest border border-primary/30 transition-colors"
+                      <Button 
+                        onClick={() => setSelectedId(null)}
+                        size="sm"
+                        className="mb-0"
                       >
-                        Marcar como leído
-                      </button>
+                        {t('markAsRead')}
+                      </Button>
                   </div>
                 </div>
               )}

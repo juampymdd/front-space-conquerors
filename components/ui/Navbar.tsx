@@ -11,6 +11,7 @@ import {
 import { ResourceHUD } from "./ResourceHUD";
 import { User, Terminal, Zap, Activity, Rocket, Settings, LogOut } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 export function Navbar() {
   const t = useTranslations("dashboard.navbar");
@@ -54,12 +55,8 @@ export function Navbar() {
 
         {/* Navigation / Actions */}
         <div className="flex items-center gap-3">
-          <div className="hidden lg:flex gap-1 mr-4">
-            {["fleet", "map", "intel"].map((key) => (
-              <Button key={key} variant="secondary" shape="flat" className="text-[10px] uppercase tracking-widest h-9 px-4">
-                {t(`menu.${key}`)}
-              </Button>
-            ))}
+          <div className="mr-6">
+            <LanguageSwitcher />
           </div>
 
           <MenuRoot>

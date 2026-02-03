@@ -285,6 +285,39 @@
             "nominal": "NOMINAL",
             "level": "LEVEL",
             "stable": "STABLE"
+        },
+        "notifications": {
+            "n1": {
+                "sender": "Defense System",
+                "subject": "INCURSION DETECTED",
+                "message": "Long-range sensors have detected a hostile fleet entering sector Sigma-9. Elevating alert level is recommended. Automatic defense protocol initiated. All ships must report to combat stations immediately."
+            },
+            "n2": {
+                "sender": "Ambassador Kael'Thas",
+                "subject": "Trade Treaty Proposal",
+                "message": "The Galactic Federation extends an offer for free trade of Deuterium. We request an immediate audience. Our refineries in the asteroid belt X-99 have surpluses that could benefit your colony."
+            },
+            "n3": {
+                "sender": "Engineering",
+                "subject": "Research Completed: Impulse Engines V",
+                "message": "Upgrades to sub-light thrusters have been installed. Fleet speed has increased by 15%. We can now reach outer planets in half the time."
+            },
+            "n4": {
+                "sender": "Logistics",
+                "subject": "Supply Arrival",
+                "message": "Cargo convoy N-442 has arrived at the mining colony. Offloading of 50,000 Metal units in progress. Expected completion in 2 standard hours."
+            },
+            "n5": {
+                "sender": "Planetary Sensors",
+                "subject": "Seismic Activity",
+                "message": "Minor tremors detected in the volcanic sector. Energy production may fluctuate. Reinforcing fusion reactor foundations is recommended."
+            },
+            "n6": {
+                "sender": "High Command",
+                "subject": "Welcome, Commander",
+                "message": "Your assignment to the frontier sector has been confirmed. We expect great things from your administration. The fleet is at your disposal."
+            },
+            "markAsRead": "MARK AS READ"
         }
     }
 }

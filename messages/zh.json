@@ -1,0 +1,323 @@
+{
+    "nav": {
+        "features": "特色",
+        "gameplay": "玩法",
+        "universe": "宇宙",
+        "login": "登录",
+        "dashboard": "进入控制台",
+        "startPlaying": "开始游戏"
+    },
+    "hero": {
+        "badge": "公测现已开启",
+        "title": "征服银河系",
+        "description": "在群星之间建立你的帝国。指挥舰队，殖民星球，在这款次世代太空战略游戏中统治宇宙。",
+        "playNow": "立即游戏",
+        "goToDashboard": "前往控制台",
+        "learnMore": "了解更多",
+        "stats": {
+            "players": "活跃玩家",
+            "planets": "已殖民星球",
+            "battles": "每日战斗"
+        }
+    },
+    "features": {
+        "title": "核心特色",
+        "subtitle": "建立银河帝国所需的一切",
+        "colonization": {
+            "title": "行星殖民",
+            "description": "在数百个独特的星球上建立殖民地。管理资源，建设基础设施，扩张你的领土。"
+        },
+        "fleet": {
+            "title": "舰队指挥",
+            "description": "设计并指挥强大的舰队。参与战术战斗，抵御威胁保卫你的帝国。"
+        },
+        "research": {
+            "title": "研究与科技",
+            "description": "解锁先进技术。升级你的文明并获得战略优势。"
+        }
+    },
+    "footer": {
+        "copyright": "SPACE CONQUERORS © 2026",
+        "terms": "条款",
+        "privacy": "隐私",
+        "contact": "联系我们"
+    },
+    "auth": {
+        "login": {
+            "title": "登录",
+            "subtitle": "",
+            "commanderId": "用户名",
+            "commanderIdPlaceholder": "输入你的用户名...",
+            "password": "密码",
+            "passwordPlaceholder": "••••••••••••",
+            "forgotPassword": "忘记密码？",
+            "submit": "登录",
+            "securedLine": "",
+            "noAccount": "还没有账号？",
+            "createAccount": "创建新账号"
+        },
+        "register": {
+            "title": "创建账号",
+            "subtitle": "",
+            "name": "姓名",
+            "namePlaceholder": "输入你的姓名...",
+            "email": "电子邮箱",
+            "emailPlaceholder": "your@email.com",
+            "commanderId": "用户名",
+            "commanderIdPlaceholder": "选择你的用户名...",
+            "password": "密码",
+            "passwordPlaceholder": "••••••••••••",
+            "confirmPassword": "确认密码",
+            "confirmPasswordPlaceholder": "••••••••••••",
+            "submit": "创建账号",
+            "securedLine": "",
+            "hasAccount": "已有账号？",
+            "login": "登录"
+        },
+        "back": "返回"
+    },
+    "dashboard": {
+        "sidebar": {
+            "title": "行星"
+        },
+        "tabs": {
+            "planetView": "行星视图",
+            "vuelos": "飞行",
+            "solarSystem": "太阳系",
+            "notifications": "通讯"
+        },
+        "categories": {
+            "fleet": "舰队",
+            "techs": "科技",
+            "defenses": "防御",
+            "movements": "移动"
+        },
+        "buildQueue": {
+            "title": "建造队列",
+            "status": "正常"
+        },
+        "solarView": {
+            "targetIdentity": "目标身份",
+            "classification": "分类",
+            "orbitRadius": "轨道半径",
+            "orbitalTelemetry": "轨道遥测",
+            "eccentricity": "离心率",
+            "inclination": "倾角",
+            "period": "周期",
+            "backButton": "返回星系",
+            "liveFeed": "星系实况",
+            "overlayTitle": "深空战术覆盖层"
+        },
+        "movements": {
+            "title": "飞行中心",
+            "activeMissions": "当前任务",
+            "noMovements": "未检测到舰队移动",
+            "origin": "起点",
+            "destination": "终点",
+            "fleetUnitCount": "编队",
+            "types": {
+                "attack": "攻击",
+                "defend": "防御",
+                "transport": "运输",
+                "expedition": "探险",
+                "espionage": "间谍",
+                "colonize": "殖民"
+            }
+        },
+        "planetTypes": {
+            "volcanic": "火山",
+            "icy": "冰冻",
+            "jungle": "丛林",
+            "gas_giant": "气态巨行星",
+            "desert": "沙漠",
+            "oceanic": "海洋",
+            "rocky": "岩石"
+        },
+        "upgrades": {
+            "level": "等级",
+            "fleet": {
+                "cazaLigero": {
+                    "name": "轻型战斗机",
+                    "description": "轻便快捷的攻击机。低廉的造价使其能组成庞大的机群淹没敌方防御。"
+                },
+                "cruceroPesado": {
+                    "name": "重型巡洋舰",
+                    "description": "装甲是轻型战斗机的三倍，火力更强，是任何战斗舰队的中坚力量。"
+                },
+                "naveCarga": {
+                    "name": "运输船",
+                    "description": "专为星际间大量资源运输设计。速度慢且脆弱，但运载能力无与伦比。"
+                },
+                "sondaEspionaje": {
+                    "name": "间谍探测器",
+                    "description": "配备先进传感器的小型无人飞船。用于获取敌方星球的关键情报。"
+                },
+                "reciclador": {
+                    "name": "回收船",
+                    "description": "专门用于在战后收集轨道碎片的飞船。对于回收损失的矿物和水晶至关重要。"
+                },
+                "destructor": {
+                    "name": "驱逐舰",
+                    "description": "真正的飞行堡垒。其唯一目的是彻底歼灭敌方舰队和重型行星防御。"
+                },
+                "sateliteSolar": {
+                    "name": "太阳能卫星",
+                    "description": "简单而有效的轨道能源平台。利用当地恒星的辐射为星球提供持续能源。"
+                },
+                "naveBatalla": {
+                    "name": "战列舰",
+                    "description": "帝国海军的骄傲。装备有巨型激光和离子护盾，能承受极端的打击。"
+                },
+                "colonizador": {
+                    "name": "殖民船",
+                    "description": "装备有在无人星球建立新殖民地所需一切的巨型飞船。"
+                }
+            },
+            "techs": {
+                "techEnergia": {
+                    "name": "能源技术",
+                    "description": "提高所有能源系统的效率。这是开发新进阶技术的基础要求。"
+                },
+                "techLaser": {
+                    "name": "激光技术",
+                    "description": "开发用于武器和护盾的聚光系统。增加轻型飞船和防御设施的火力。"
+                },
+                "techMotores": {
+                    "name": "引擎技术",
+                    "description": "研究化学推进和脉冲系统。显著提高所有飞船的速度。"
+                },
+                "techIones": {
+                    "name": "离子技术",
+                    "description": "利用带电粒子制造破坏性武器和更坚固的护盾。中型飞船的基础。"
+                },
+                "techHiperespacio": {
+                    "name": "超空间技术",
+                    "description": "允许飞船通过折叠维度进行跳跃，大幅减少星际旅行时间。"
+                },
+                "techPlasma": {
+                    "name": "等离子技术",
+                    "description": "热能武器的终极演变。生成具有巨大破坏力的电离物质球。"
+                },
+                "researchNetwork": {
+                    "name": "星际研究网络",
+                    "description": "连接不同星球的实验室以共享数据，大幅减少总研究时间。"
+                },
+                "astrophysics": {
+                    "name": "天体物理学",
+                    "description": "对宇宙的高级研究。允许殖民新星球并提高舰队的探险能力。"
+                }
+            },
+            "defenses": {
+                "missileLauncher": {
+                    "name": "火箭发射器",
+                    "description": "发射动能弹的基​​础廉价防御。对付大量小型飞船有效。"
+                },
+                "smallLaser": {
+                    "name": "小型激光炮",
+                    "description": "使用聚光的可靠防御系统。对轻型战斗机有极佳的命中率。"
+                },
+                "largeLaser": {
+                    "name": "重型激光炮",
+                    "description": "配备更强电容器的小型激光炮改进版。能够穿透重型巡洋舰的装甲。"
+                },
+                "gaussCannon": {
+                    "name": "高斯加农炮",
+                    "description": "以高超音速发射金属弹丸的电磁加速器。能无视敌方大部分护盾。"
+                },
+                "ionCannon": {
+                    "name": "离子加农炮",
+                    "description": "发射离子束使攻击飞船的电子系统过载，使其暂时瘫痪。"
+                },
+                "plasmaCannon": {
+                    "name": "等离子炮塔",
+                    "description": "最致命的行星防御。发射等离子球，能一击蒸发几乎任何飞船。"
+                },
+                "smallShield": {
+                    "name": "小型防护罩",
+                    "description": "包裹星球的战术力场发生器。提供针对小型轰炸的额外保护层。"
+                },
+                "largeShield": {
+                    "name": "大型防护罩",
+                    "description": "巨大的能量护盾。需要极大的能量，但能抵御重型战列舰的打击。"
+                }
+            }
+        },
+        "mainSidebar": {
+            "galacticMap": "银河地图",
+            "fleetCommand": "舰队指挥",
+            "defenseOps": "防御行动",
+            "techLabs": "科技实验室",
+            "diplomacy": "外交",
+            "systemConfig": "系统设置",
+            "powerGrid": "能源网",
+            "stable": "稳定",
+            "details": {
+                "sectors": "12 星区",
+                "vessels": "48 艘",
+                "shields": "护盾：100%",
+                "discovery": "待探索",
+                "requests": "3 个请求",
+                "version": "内核 2.0"
+            }
+        },
+        "resources": {
+            "metal": "金属",
+            "crystal": "晶体",
+            "deuterium": "重氢",
+            "energy": "能量"
+        },
+        "navbar": {
+            "subtitle": "银河统治",
+            "reactor": "反应堆",
+            "shields": "护盾",
+            "menu": {
+                "fleet": "舰队",
+                "map": "地图",
+                "intel": "情报"
+            },
+            "userMenu": {
+                "profile": "指挥官档案",
+                "settings": "系统设置",
+                "logout": "断开连接"
+            }
+        },
+        "status": {
+            "nominal": "正常",
+            "level": "等级",
+            "stable": "稳定"
+        },
+        "notifications": {
+            "n1": {
+                "sender": "防御系统",
+                "subject": "检测到入侵",
+                "message": "远程传感器检测到一支敌对舰队进入 Sigma-9 星区。建议提高警戒级别。自动防御协议已启动。所有飞船必须立即向战斗岗位报到。"
+            },
+            "n2": {
+                "sender": "大使 Kael'Thas",
+                "subject": "贸易条约提案",
+                "message": "银河联邦提出重氢自由贸易的提议。我们请求立即会面。我们在 X-99 小行星带的精炼厂有富余资源，可能有益于贵殖民地。"
+            },
+            "n3": {
+                "sender": "工程部",
+                "subject": "研究完成：脉冲引擎 V",
+                "message": "亚光速推进器的升级已安装。舰队速度提高了 15%。我们现在可以用一半的时间到达外围行星。"
+            },
+            "n4": {
+                "sender": "后勤部",
+                "subject": "物资抵达",
+                "message": "货运船队 N-442 已抵达矿业殖民地。50,000 单位金属的卸货正在进行中。预计 2 标准小时内完成。"
+            },
+            "n5": {
+                "sender": "行星传感器",
+                "subject": "地震活动",
+                "message": "火山区域检测到轻微震动。能源生产可能会波动。建议加固聚变反应堆的地基。"
+            },
+            "n6": {
+                "sender": "最高指挥部",
+                "subject": "欢迎，指挥官",
+                "message": "您对边境星区的任命已确认。我们对您的管理寄予厚望。舰队听候您的差遣。"
+            },
+            "markAsRead": "标记为已读"
+        }
+    }
+}

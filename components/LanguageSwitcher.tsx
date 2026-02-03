@@ -18,15 +18,24 @@ export function LanguageSwitcher() {
         router.push(newPath);
     };
 
+    const localeLabels: Record<string, string> = {
+        en: 'English',
+        es: 'Español',
+        zh: '中文',
+        ko: '한국어',
+        ja: '日本語',
+        de: 'Deutsch'
+    };
+
     return (
         <div className="relative group">
             <button className="flex items-center gap-2 text-sm text-primary/70 hover:text-primary transition-colors uppercase tracking-wider">
                 <Globe className="w-4 h-4" />
-                <span>{locale.toUpperCase()}</span>
+                <span>{localeLabels[locale] || locale.toUpperCase()}</span>
             </button>
 
-            <div className="absolute top-full right-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-black/90 border border-primary/20 rounded overflow-hidden backdrop-blur-sm">
+            <div className="absolute top-full right-0 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="bg-black/90 border border-primary/20 rounded overflow-hidden backdrop-blur-sm shadow-xl min-w-[120px]">
                     {routing.locales.map((loc) => (
                         <button
                             key={loc}
@@ -36,7 +45,7 @@ export function LanguageSwitcher() {
                                 : 'text-primary/70 hover:bg-primary/10 hover:text-primary'
                                 }`}
                         >
-                            {loc === 'en' ? 'English' : 'Español'}
+                            {localeLabels[loc] || loc.toUpperCase()}
                         </button>
                     ))}
                 </div>

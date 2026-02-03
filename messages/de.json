@@ -1,0 +1,323 @@
+{
+    "nav": {
+        "features": "Funktionen",
+        "gameplay": "Gameplay",
+        "universe": "Universum",
+        "login": "Anmelden",
+        "dashboard": "Zum Dashboard",
+        "startPlaying": "Spiel starten"
+    },
+    "hero": {
+        "badge": "Offene Beta Jetzt Verfügbar",
+        "title": "EROBERE DIE GALAXIE",
+        "description": "Baue dein Imperium in den Sternen auf. Befehlige Flotten, kolonisiere Planeten und beherrsche das Universum in diesem Weltraumstrategiespiel der nächsten Generation.",
+        "playNow": "Jetzt spielen",
+        "goToDashboard": "Zum Dashboard",
+        "learnMore": "Mehr erfahren",
+        "stats": {
+            "players": "Aktive Spieler",
+            "planets": "Kolon. Planeten",
+            "battles": "Tägliche Schlachten"
+        }
+    },
+    "features": {
+        "title": "HAUPTFUNKTIONEN",
+        "subtitle": "Alles, was du brauchst, um ein galaktisches Imperium aufzubauen",
+        "colonization": {
+            "title": "Planetare Kolonisation",
+            "description": "Errichte Kolonien auf Hunderten von einzigartigen Planeten. Verwalte Ressourcen, baue Infrastruktur und erweitere dein Territorium."
+        },
+        "fleet": {
+            "title": "Flottenkommando",
+            "description": "Entwirf und befehlige mächtige Flotten. Nimm an taktischen Schlachten teil und verteidige dein Imperium vor Bedrohungen."
+        },
+        "research": {
+            "title": "Forschung & Technologie",
+            "description": "Schalte fortschrittliche Technologien frei. Verbessere deine Zivilisation und erlange strategische Vorteile."
+        }
+    },
+    "footer": {
+        "copyright": "SPACE CONQUERORS © 2026",
+        "terms": "AGB",
+        "privacy": "Datenschutz",
+        "contact": "Kontakt"
+    },
+    "auth": {
+        "login": {
+            "title": "Einloggen",
+            "subtitle": "",
+            "commanderId": "Benutzername",
+            "commanderIdPlaceholder": "Benutzername eingeben...",
+            "password": "Passwort",
+            "passwordPlaceholder": "••••••••••••",
+            "forgotPassword": "Passwort vergessen?",
+            "submit": "Einloggen",
+            "securedLine": "",
+            "noAccount": "Kein Konto?",
+            "createAccount": "Neues Konto erstellen"
+        },
+        "register": {
+            "title": "Konto erstellen",
+            "subtitle": "",
+            "name": "Name",
+            "namePlaceholder": "Namen eingeben...",
+            "email": "E-Mail",
+            "emailPlaceholder": "deine@email.com",
+            "commanderId": "Benutzername",
+            "commanderIdPlaceholder": "Benutzername wählen...",
+            "password": "Passwort",
+            "passwordPlaceholder": "••••••••••••",
+            "confirmPassword": "PW bestätigen",
+            "confirmPasswordPlaceholder": "••••••••••••",
+            "submit": "Konto erstellen",
+            "securedLine": "",
+            "hasAccount": "Bereits ein Konto?",
+            "login": "Einloggen"
+        },
+        "back": "Zurück"
+    },
+    "dashboard": {
+        "sidebar": {
+            "title": "Planeten"
+        },
+        "tabs": {
+            "planetView": "Planetenansicht",
+            "vuelos": "Flüge",
+            "solarSystem": "Sonnensystem",
+            "notifications": "Komm."
+        },
+        "categories": {
+            "fleet": "Flotte",
+            "techs": "Forschung",
+            "defenses": "Verteidigung",
+            "movements": "Bewegungen"
+        },
+        "buildQueue": {
+            "title": "Baureihe",
+            "status": "NOMINAL"
+        },
+        "solarView": {
+            "targetIdentity": "Zielidentität",
+            "classification": "Klassifizierung",
+            "orbitRadius": "Orbitradius",
+            "orbitalTelemetry": "Orbitale Telemetrie",
+            "eccentricity": "Exzentrizität",
+            "inclination": "Inklination",
+            "period": "Periode",
+            "backButton": "Zum System",
+            "liveFeed": "System-Live-Feed",
+            "overlayTitle": "Taktisches Deep-Space-Overlay"
+        },
+        "movements": {
+            "title": "Flugzentrum",
+            "activeMissions": "Aktive Missionen",
+            "noMovements": "Keine Flottenbewegungen erkannt",
+            "origin": "Herkunft",
+            "destination": "Ziel",
+            "fleetUnitCount": "Zusammensetzung",
+            "types": {
+                "attack": "Angriff",
+                "defend": "Verteidigung",
+                "transport": "Transport",
+                "expedition": "Expedition",
+                "espionage": "Spionage",
+                "colonize": "Kolonisieren"
+            }
+        },
+        "planetTypes": {
+            "volcanic": "Vulkanisch",
+            "icy": "Eis",
+            "jungle": "Dschungel",
+            "gas_giant": "Gasriese",
+            "desert": "Wüste",
+            "oceanic": "Ozeanisch",
+            "rocky": "Felsig"
+        },
+        "upgrades": {
+            "level": "Stufe",
+            "fleet": {
+                "cazaLigero": {
+                    "name": "Leichter Jäger",
+                    "description": "Ein leichtes und schnelles Angriffsraumschiff. Seine geringen Produktionskosten ermöglichen riesige Schwärme, die gegnerische Verteidigungen überwältigen."
+                },
+                "cruceroPesado": {
+                    "name": "Schwerer Kreuzer",
+                    "description": "Fast dreimal so stark gepanzert wie ein Leichter Jäger und mit überlegener Feuerkraft, das Rückgrat jeder Kampfflotte."
+                },
+                "naveCarga": {
+                    "name": "Transporter",
+                    "description": "Speziell für den Massentransport von Ressourcen zwischen Systemen entwickelt. Langsam und verwundbar, aber unübertroffene Kapazität."
+                },
+                "sondaEspionaje": {
+                    "name": "Spionagesonde",
+                    "description": "Kleines unbemanntes Schiff mit fortschrittlichen Sensoren. Ermöglicht das Beschaffen kritischer Informationen über feindliche Planeten."
+                },
+                "reciclador": {
+                    "name": "Recycler",
+                    "description": "Spezialschiff zum Sammeln von Trümmerfeldern nach einer Schlacht. Unverzichtbar für die Rückgewinnung verlorener Mineralien und Kristalle."
+                },
+                "destructor": {
+                    "name": "Zerstörer",
+                    "description": "Eine wahre fliegende Festung. Sein einziger Zweck ist die totale Vernichtung feindlicher Flotten und schwerer planetarer Verteidigungen."
+                },
+                "sateliteSolar": {
+                    "name": "Solarsatellit",
+                    "description": "Einfache, aber effektive orbitale Energieplattform. Liefert konstante Energie durch Nutzung der Strahlung des lokalen Sterns."
+                },
+                "naveBatalla": {
+                    "name": "Schlachtschiff",
+                    "description": "Der Stolz der imperialen Marine. Ausgestattet mit Mega-Lasern und Ionenschilden, hält es extremem Beschuss stand."
+                },
+                "colonizador": {
+                    "name": "Kolonieschiff",
+                    "description": "Ein riesiges Schiff, ausgestattet mit allem Nötigen, um neue Kolonien auf unbewohnten Planeten zu gründen."
+                }
+            },
+            "techs": {
+                "techEnergia": {
+                    "name": "Energietechnik",
+                    "description": "Verbessert die Effizienz aller Energiesysteme. Grundvoraussetzung für die Entwicklung neuer fortschrittlicher Technologien."
+                },
+                "techLaser": {
+                    "name": "Lasertechnik",
+                    "description": "Entwicklung konzentrierter Lichtsysteme für Waffen und Schilde. Erhöht die Feuerkraft von leichten Schiffen und Verteidigungen."
+                },
+                "techMotores": {
+                    "name": "Antriebstechnik",
+                    "description": "Forschung an chemischen Antrieben und Impulssystemen. Erhöht signifikant die Geschwindigkeit aller Schiffe."
+                },
+                "techIones": {
+                    "name": "Ionentechnik",
+                    "description": "Nutzung geladener Teilchen für disruptive Waffen und stärkere Schilde. Grundlegend für Schiffe der mittleren Klasse."
+                },
+                "techHiperespacio": {
+                    "name": "Hyperraumtechnik",
+                    "description": "Ermöglicht Schiffen Sprünge durch gefaltete Dimensionen und reduziert drastisch die interstellare Reisezeit."
+                },
+                "techPlasma": {
+                    "name": "Plasmatechnik",
+                    "description": "Die finale Evolution thermischer Waffen. Erzeugt Sphären ionisierter Materie mit immenser Zerstörungskraft."
+                },
+                "researchNetwork": {
+                    "name": "Forschungsnetzwerk",
+                    "description": "Verbindet Labore verschiedener Planeten zum Datenaustausch und reduziert drastisch die Gesamtforschungszeit."
+                },
+                "astrophysics": {
+                    "name": "Astrophysik",
+                    "description": "Fortschrittliche Erforschung des Kosmos. Ermöglicht die Besiedlung neuer Planeten und verbessert die Expeditionskapazität der Flotten."
+                }
+            },
+            "defenses": {
+                "missileLauncher": {
+                    "name": "Raketenwerfer",
+                    "description": "Einfache und billige Verteidigung, die kinetische Projektile abfeuert. Effektiv gegen kleine Schiffe in großer Zahl."
+                },
+                "smallLaser": {
+                    "name": "Leichtes Lasergeschütz",
+                    "description": "Zuverlässiges Verteidigungssystem mit gebündeltem Licht. Exzellente Trefferquote gegen leichte Jäger."
+                },
+                "largeLaser": {
+                    "name": "Schweres Lasergeschütz",
+                    "description": "Verbesserte Version des leichten Lasers mit stärkerem Kondensator. Kann die Panzerung schwerer Kreuzer durchdringen."
+                },
+                "gaussCannon": {
+                    "name": "Gaußkanone",
+                    "description": "Elektromagnetischer Beschleuniger, der Metallprojektile mit Hyperschallgeschwindigkeit abfeuert. Ignoriert Großteil der feindlichen Schilde."
+                },
+                "ionCannon": {
+                    "name": "Ionenkanone",
+                    "description": "Feuert Ionenstöße ab, die elektronische Systeme angreifender Schiffe überlasten und sie vorübergehend lahmlegen."
+                },
+                "plasmaCannon": {
+                    "name": "Plasmawerfer",
+                    "description": "Die tödlichste planetare Verteidigung. Feuert eine Plasmasphäre, die fast jedes Schiff mit einem Treffer verdampfen kann."
+                },
+                "smallShield": {
+                    "name": "Kleine Schildkuppel",
+                    "description": "Taktischer Feldgenerator, der den Planeten umhüllt. Bietet eine zusätzliche Schutzschicht gegen kleinere Bombardements."
+                },
+                "largeShield": {
+                    "name": "Große Schildkuppel",
+                    "description": "Ein massiver Energieschild. Benötigt immense Energie, hält aber Treffern schwerer Schlachtschiffe stand."
+                }
+            }
+        },
+        "mainSidebar": {
+            "galacticMap": "Galaxienkarte",
+            "fleetCommand": "Flottenkommando",
+            "defenseOps": "Verteidigung",
+            "techLabs": "Forschungslabor",
+            "diplomacy": "Diplomatie",
+            "systemConfig": "Einstellungen",
+            "powerGrid": "Energienetz",
+            "stable": "STABIL",
+            "details": {
+                "sectors": "12 Sektoren",
+                "vessels": "48 Schiffe",
+                "shields": "Schilde: 100%",
+                "discovery": "Entdeckung ausstehend",
+                "requests": "3 Anfragen",
+                "version": "Kernal 2.0"
+            }
+        },
+        "resources": {
+            "metal": "Metall",
+            "crystal": "Kristall",
+            "deuterium": "Deuterium",
+            "energy": "Energie"
+        },
+         "navbar": {
+            "subtitle": "Galaktische Herrschaft",
+            "reactor": "Reaktor",
+            "shields": "Schilde",
+            "menu": {
+                "fleet": "Flotte",
+                "map": "Karte",
+                "intel": "Intel"
+            },
+            "userMenu": {
+                "profile": "Kommandantenprofil",
+                "settings": "Systemeinstellungen",
+                "logout": "Verbindung trennen"
+            }
+        },
+        "status": {
+            "nominal": "NOMINAL",
+            "level": "STUFE",
+            "stable": "STABIL"
+        },
+        "notifications": {
+             "n1": {
+                "sender": "Verteidigungssystem",
+                "subject": "INKURSION ERKANNT",
+                "message": "Langstreckensensoren haben eine feindliche Flotte beim Eintritt in den Sektor Sigma-9 entdeckt. Erhöhung der Alarmstufe wird empfohlen. Automatisches Verteidigungsprotokoll initiiert. Alle Schiffe müssen sich sofort auf Gefechtsstation begeben."
+            },
+            "n2": {
+                "sender": "Botschafter Kael'Thas",
+                "subject": "Vorschlag Handelsvertrag",
+                "message": "Die Galaktische Föderation bietet ein Freihandelsabkommen für Deuterium an. Wir bitten um eine sofortige Audienz. Unsere Raffinerien im Asteroidengürtel X-99 haben Überschüsse, die Ihrer Kolonie nutzen könnten."
+            },
+            "n3": {
+                "sender": "Technik",
+                "subject": "Forschung abgeschlossen: Impulstriebwerk V",
+                "message": "Upgrades für die Unterlichtantriebe wurden installiert. Flottengeschwindigkeit um 15% erhöht. Wir können die äußeren Planeten nun in der Hälfte der Zeit erreichen."
+            },
+            "n4": {
+                "sender": "Logistik",
+                "subject": "Versorgungslieferung",
+                "message": "Frachtkonvoi N-442 ist in der Minenkolonie eingetroffen. Entladen von 50.000 Einheiten Metall im Gange. Voraussichtlicher Abschluss in 2 Standardstunden."
+            },
+            "n5": {
+                "sender": "Planetare Sensoren",
+                "subject": "Seismische Aktivität",
+                "message": "Kleinere Beben im vulkanischen Sektor registriert. Energieproduktion könnte schwanken. Verstärkung der Fundamente des Fusionsreaktors wird empfohlen."
+            },
+            "n6": {
+                "sender": "Oberkommando",
+                "subject": "Willkommen, Kommandant",
+                "message": "Ihre Zuweisung zum Grenzsektor wurde bestätigt. Wir erwarten Großes von Ihrer Verwaltung. Die Flotte steht zu Ihrer Verfügung."
+            },
+            "markAsRead": "ALS GELESEN MARKIEREN"
+        }
+    }
+}
